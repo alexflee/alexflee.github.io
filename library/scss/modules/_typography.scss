@@ -1,0 +1,97 @@
+//****************
+// Project Typography
+//****************
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 130%;
+  color: $brand-primary;
+  margin-top: 0.333rem;
+  margin-bottom: 0.85rem;
+  font-weight: 500;
+}
+
+h1 {
+  @include font-size($h1-font-sizes);
+  font-family: $font-primary;
+  font-weight: 100;
+}
+
+h2 {
+  @include font-size($h2-font-sizes);
+  font-family: $font-primary;
+}
+
+h3 {
+  @include font-size($h3-font-sizes);
+  font-family: $font-primary;
+}
+
+h4 {
+  @include font-size($h4-font-sizes);
+  font-family: $font-secondary;
+  font-weight: 100;
+}
+
+h5 {
+  @include font-size($h5-font-sizes);
+  font-family: $font-secondary;
+  font-weight: 700;
+  color:$brand-secondary;
+}
+
+/*********************
+P Styles
+*********************/
+
+p {
+  @include font-size($p-font-sizes);
+  margin: 0 0 0.85rem 0;
+  color:$black;
+}
+
+/*********************
+Link Styles
+*********************/
+
+a {
+  color: $brand-tertiary;
+  text-decoration: none;
+  @include transition(all, 0.15s, ease-in-out);
+  text-decoration: underline;
+
+  &:hover {
+    color: darken($brand-tertiary, 5%);
+    cursor: pointer;
+  }
+}
+
+
+/*********************
+Weight Styles
+*********************/
+
+.normal { font-weight: normal; }
+.b      { font-weight: bold; }
+.fw1    { font-weight: 100; }
+.fw2    { font-weight: 200; }
+.fw3    { font-weight: 300; }
+.fw4    { font-weight: 400; }
+.fw5    { font-weight: 500; }
+.fw6    { font-weight: 600; }
+.fw7    { font-weight: 700; }
+.fw8    { font-weight: 800; }
+.fw9    { font-weight: 900; }
+
+/*********************
+Modifier Styles
+*********************/
+
+.uppercase{
+  text-transform: uppercase;
+}
+.lowercase{
+  text-transform: lowercase;
+}

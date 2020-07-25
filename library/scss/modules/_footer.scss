@@ -1,0 +1,33 @@
+//****************
+// Footer Styles
+//****************
+
+
+
+
+.footer{
+  background-color: $brand-primary;
+  padding-bottom: 20px;
+
+  p{
+    font-size: $f-s;
+    color:$white;
+    a{
+      color:$white;
+    }
+  }
+
+  &__text{
+    line-height: 70px;
+    text-align: left;
+
+    @include mobile{
+      text-align: right;
+    }
+  }
+
+  &__logo{
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+}

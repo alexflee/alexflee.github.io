@@ -1,0 +1,73 @@
+//****************
+// Banner Styles
+//****************
+
+
+
+
+/*********************
+Banner
+*********************/
+
+.banner{
+  padding-top:130px;
+  min-height: 200px;
+  text-align: center;
+  padding-bottom: 30px;
+  background:$brand-primary;
+  overflow: hidden;
+  position: relative;
+
+  .container{
+    z-index: 4;
+    position: relative;
+  }
+
+  h1{
+    color:$white;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+
+  h4{
+    color:$white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  }
+
+  @include mobile{
+    padding-top:160px;
+  }
+  @include tablet{
+    padding-top:180px;
+    min-height: 500px;
+  }
+
+  &.home{
+    height:100vh;
+  }
+
+  &__background{
+    position: absolute;
+    //z-index: -1;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background-color: $brand-tertiary;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.home{
+      background-image: url('../images/banner/rawpixel-256641-unsplash-(1).jpg');
+    }
+    &.whoweare{
+      background-image: url('../images/banner/mimi-thian-737711-unsplash.jpg');
+    }
+    &.contact{
+      background-image: url('../images/banner/jesse-orrico-60373-unsplash.jpg');
+    }
+  }
+
+}

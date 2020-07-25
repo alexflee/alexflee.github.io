@@ -1,0 +1,48 @@
+//****************
+// Project Maps
+//****************
+
+
+
+
+/*********************
+Colours map
+*********************/
+
+$colors: (
+  project-primary: $brand-primary,
+  project-secondary: $brand-secondary,
+  project-tertiary: $brand-tertiary,
+  project-bg-light: $bg-light,
+  project-border: $border,
+  project-white: $white,
+  project-black: $black
+);
+
+
+/*********************
+Font sizes map
+*********************/
+
+$fontsizes: (
+  xxxl: $f-xxxl,
+  xxl: $f-xxl,
+  xl: $f-xl,
+  l: $f-l,
+  m: $f-m,
+  base: $f-base,
+  s: $f-s,
+  xs: $f-xs,
+  xxs: $f-xxs,
+  zero: $f-zero
+);
+
+/*********************
+Font sizes modifier
+*********************/
+
+@each $fontsize, $size in $fontsizes {
+  .f--#{$fontsize} {
+    font-size: $size !important;
+  }
+}

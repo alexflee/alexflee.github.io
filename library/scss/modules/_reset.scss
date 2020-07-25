@@ -1,0 +1,157 @@
+//****************
+// Reset Syles
+//****************
+
+
+
+
+/*********************
+HTML
+*********************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+
+html {
+  font-size: 14px; // Base font size
+  box-sizing: border-box;
+}
+
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.65rem;
+  font-family: $font-primary;
+	background-color: $white;
+}
+
+ol {
+	list-style: none;
+}
+
+/*********************
+Text
+*********************/
+
+a:hover, a:active, a:focus, a:visited, button {
+    outline: none !important;
+		cursor: pointer;
+}
+
+b{
+	color:inherit;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+	width:100%;
+	height:auto;
+	display:block;
+	position: relative;
+}
+
+/*********************
+INPUTS
+*********************/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/*********************
+FLEX
+*********************/
+
+@supports (display: -webkit-flex) {
+	.equal {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.row-eq-height {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display:         flex;
+	  flex-wrap: wrap;
+	}
+
+	.row-eq-height > [class*='col-'] {
+	  display: flex;
+	  flex-direction: column;
+	}
+}
+
+/*********************
+BEM
+*********************/
+
+.no-outline{
+  outline: none !important;
+}
+
+.float--l{
+	float:left !important;
+}
+
+.float--r{
+	float:right !important;
+}
+.float--none{
+	float:none !important;
+}
+
+.text-align--left{
+	text-align:left !important;
+}
+.text-align--right{
+	text-align:right !important;
+}
+.text-align--center{
+	text-align:center !important;
+}
+.middle{
+	margin:0px auto !important;
+	float:none !important;
+	display: table !important;
+}
+
+.w100{
+	width:100% !important;
+}
+
+.underline{
+	text-decoration:underline !important;
+}

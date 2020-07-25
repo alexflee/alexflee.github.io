@@ -1,0 +1,26 @@
+//****************
+// Section Syles
+//****************
+
+
+
+
+section{
+  position: relative;
+
+  &.padded-section{
+    padding:$f-s 0px;
+
+    @include mobile{
+      padding:$f-m 0px;
+    }
+
+    @include tablet{
+      padding:$f-xl 0px;
+    }
+
+    @include desktop{
+      padding:$f-xxl 0px;
+    }
+  }
+}

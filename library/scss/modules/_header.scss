@@ -1,0 +1,63 @@
+//****************
+// Header Styles
+//****************
+
+
+
+
+.header{
+  z-index: 10000;
+  position: relative;
+  width:100%;
+  height:auto;
+  min-height: 90px;
+  background-color: transparent;
+  @include transition(all, 1s, ease-in-out);
+
+  a{
+    text-decoration: none;
+  }
+
+  &--fixed{
+    top:0px;
+    margin-top:0px;
+    position:fixed;
+  }
+
+  &--reduce{
+
+    background-color:rgba(255, 255, 255, 1);
+    @include transition(all, 1s, ease-in-out);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+
+    .main-nav{
+
+      #logo{
+        background-image: url('../images/logo.png');
+        @include transition(all, 1s, ease-in-out);
+      }
+
+      #nav-icon{
+        span{
+          background-color: $black;
+        }
+      }
+
+      .main-nav__navigation{
+        li{
+          a{
+            @include transition(all, 1s, ease-in-out);
+            color:$brand-primary;
+            &:hover{
+              color:$brand-primary;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

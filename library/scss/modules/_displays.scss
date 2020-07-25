@@ -1,0 +1,34 @@
+//****************
+// Displays Styles
+//****************
+
+
+
+
+/*********************
+Globals
+*********************/
+
+.d--block {
+  display: block;
+}
+
+.d--inline {
+  display: inline;
+}
+
+.d--iblock {
+  display: inline-block;
+}
+
+.d--table {
+  display: table;
+}
+
+/*********************
+Border
+*********************/
+
+.border{
+	border:1px solid $border;
+}
