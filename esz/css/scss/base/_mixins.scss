@@ -1,0 +1,65 @@
+//**
+// Project Mixins
+//**
+
+// Clear after floats
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Apply clearfix to this classes by default
+.clearfix,
+.group {
+  @include clearfix;
+}
+
+//.box { @include border-radius(10px); }
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($radius){
+  -webkit-transition: all $radius;
+     -moz-transition: all $radius;
+      -ms-transition: all $radius;
+       -o-transition: all $radius;
+          transition: all $radius;
+}
+@mixin ease-in($radius){
+  -webkit-transition: $radius ease-in;
+     -moz-transition: $radius ease-in;
+       -o-transition: $radius ease-in;
+      -ms-transition: $radius ease-in;
+          transition: $radius ease-in;
+}
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+  
+  @if $point == tablettodesktop {
+     @media (min-width: 1140px) { @content ; }
+  }
+  @else if $point == mobiletotablet {
+     @media (min-width: 700px) { @content ; }
+  }
+}
+
+

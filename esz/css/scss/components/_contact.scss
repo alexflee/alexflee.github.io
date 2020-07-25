@@ -1,0 +1,215 @@
+//**
+// CONTACT
+//**
+
+#contactdone{
+    display: none;
+    width: 100%;
+    float: left;
+    height: auto;
+    background-color: #def2d6;
+    border: 1px solid #b0cca5;
+    color: #597151;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+.show{
+    display: block !important;
+}
+
+.form{
+    padding-top: 50px;
+    float: left;
+    font-size: 16px;
+    color: $blue;
+    font-family: $opensans;
+    font-weight: bold;
+    width:100%;
+
+    @include breakpoint(mobiletotablet) {
+	    width:50%;
+	}
+
+    @include breakpoint(tablettodesktop) {
+		width: 570px;
+	}
+    input[type=text], input[type=number]{
+	    padding: 15px;
+	    border:1px solid #cccccc;
+	    margin: 0px 20px 20px 0px;
+	    float: left;
+	    color: $primary-color;
+	    font-family: $opensans;
+	    font-weight: bold;
+	    width:100%;
+	    box-sizing:border-box;
+
+	    @include breakpoint(mobiletotablet) {
+			width: 95%;
+			padding-left:5%;
+		}
+		@include breakpoint(tablettodesktop) {
+			width: 230px;
+			box-sizing: none;
+		}
+	}
+	.textarea{
+	    width: 513px;
+	    height: 74px;
+	    padding: 15px;
+	    border:1px solid #cccccc;
+	    margin: 0px 20px 20px 0px;
+	    float: left;
+	    color: $primary-color;
+	    font-family: $opensans;
+	    font-weight: bold; 
+	    width: 100%;
+	    box-sizing:border-box;
+
+	    @include breakpoint(mobiletotablet) {
+			width: 95%;
+			padding-left:5%;
+		}
+
+	    @include breakpoint(tablettodesktop) {
+			width: 480px;
+			box-sizing: none;
+		}
+	}
+
+	input[type=submit]{
+	    width: 230px;
+	    padding: 15px;
+	    margin: 0px 20px 20px 0px;
+	    float: left;
+	    background-color: #00baff;
+	    color: $white;
+	    font-weight: bold;
+	    border-radius: 3px;
+	    width: 100%;
+		box-sizing: border-box;
+
+	    @include breakpoint(mobiletotablet) {
+			width: 95%;
+			padding-left:5%;
+		}
+
+	    @include breakpoint(tablettodesktop) {
+			width: 230px;
+			box-sizing: none;
+		}
+	}
+	input:focus, .textarea:focus { 
+	    border:1px solid #005894;
+	}
+	.submit-button{
+	    cursor: pointer;
+	}
+}
+
+/* -- ASIDE --*/
+
+aside{
+    float: left;
+    padding:20px 10px 0px 10px;
+    width: 100%;
+    box-sizing:border-box;
+
+    @include breakpoint(mobiletotablet) {
+		float: right;
+        padding:50px 0px 0px 50px;
+        width: 50%;
+	}
+
+	@include breakpoint(tablettodesktop) {
+		float: right;
+        box-sizing:none;
+	}
+
+    a{ color:$primary-color;}
+
+    figure{
+	    float: left;
+	    height: 70px;
+	    width: 100%;
+
+	    @include breakpoint(mobiletotablet) {
+	        width: 20%;
+	        height: 50px;
+	        margin-right: 5%;
+	        background-size:100%;
+    	}
+    	@include breakpoint(tablettodesktop) {
+	        height: 150px;
+	    	width: 50px;
+	    	margin-right: 40px;
+    	}
+	}
+	.getintouch{
+	    background-image: url('../images/icons/contact_plane.png');
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    background-size: 40px;
+	}
+	.registeredoffice{
+	    background-image: url('../images/icons/contact_map.png');
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    background-size: 40px;
+	}
+	.asidetext{
+	    width: 100%;
+        max-width: 100%;
+        float: left;
+        padding-bottom: 50px;
+        height: auto;
+        min-height: 80px;
+        text-align: center;
+
+	    @include breakpoint(mobiletotablet) {
+	        width: 75%;
+	        float: right;
+	        text-align: left;
+    	}
+
+    	@include breakpoint(tablettodesktop) {
+	        float: left;
+		    max-width: 350px;
+		    width: 100%;
+		    height: auto;
+		    min-height: 150px;
+    	}
+
+	    .title{
+		    color: $primary-color;
+		    font-size: 20px;
+		    font-weight: bold;
+		    margin-bottom: 20px;
+
+		    i{
+			    width: 30px;
+			    height: 25px;
+			    display: inline-block;
+			    margin-bottom: -5px;
+			    background-image: url('../images/icons/arrow.png');
+			    background-position: center center;
+			    background-repeat: no-repeat;
+			    background-size: 20px;
+			}
+		}
+		p{
+		    color: $primary-color;
+		    font-size: 14px;
+		    font-weight: normal;
+
+		    @include breakpoint(mobiletotablet) {
+		        font-size: 18px;
+	    	}
+		}
+	}
+}
+.aside2{
+    padding-top: 0px !important;
+}
