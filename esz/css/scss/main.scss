@@ -1,0 +1,37 @@
+// Reset default browser styles using Normalize
+@import "../../node_modules/normalize-scss/sass/_normalize.scss";
+
+// Install FontAwesome for useful icons
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+// Import fonts from Google
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lato:400,700);
+
+// Set variables and reusable mixins
+@import "base/config";
+@import "base/mixins";
+
+// Import typical layout styles
+@import "base/type";
+
+// Import reusable modules
+@import "components/buttons";
+//@import "components/alerts";
+@import "components/header";
+@import "components/section";
+@import "components/contact";
+@import "components/footer";
+@import "components/animations";
+
+// Specific project styles, add any section specific sass modules here
+@import "pages/layout";
+
+// Additional styles to think about
+//@import "base/responsive";
+//@import "base/print";
+
+// If IE support is needed
+@import "base/ie";
+
+// For anything quick and dirty that needs thrown in
+//@import "base/shame";

@@ -1,0 +1,472 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: none;   
+}
+.l { float: left !important; }
+.r { float: right !important; }
+.text-left{text-align: left;}
+.ease{
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.text-right{text-align: right;}
+.mauto{margin-left: auto; margin-right: auto;}
+.clear { clear: both; }
+img{display: block;}
+.noborder{border: none !important;}
+.visible{visibility:visible !important;}
+.z{z-index: 10000; position: relative;}
+
+h1{text-align: left; font-size: 50px; color: #ffffff; line-height: 70px; font-weight: 400; position: relative;}
+h2{text-align: left; font-size: 20px; color: #8789ab; line-height: 34px; font-weight: lighter; position: relative; padding-top: 20px;}
+h3{text-align: left; font-size: 22px; color: #ffffff; line-height: 22px; font-weight: normal; position: relative; padding-bottom: 15px;}
+h4{text-align: left; font-size: 18px; color: #ffffff; line-height: 22px; font-weight: lighter;}
+h5{text-align: left; font-size: 14px; color: #ececec; line-height: 22px; font-weight: bold;}
+p{font-size: 14px; color:#ffffff; line-height: 35px;}
+strong{color: #a0a4a3; font-weight: normal;}
+h5 a{color:#ececec;}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+html { 
+    /* padding: 50px; */
+    background-color: #292a3e;
+}
+body { 
+    font-family: "brandon-grotesque",sans-serif;
+    color: #666666;
+    font-size: 16px;
+    background-color: #292a3e;
+    width:100%;
+    margin: 0 auto;
+}
+
+/**/
+/** WRAPPER **/
+/**/
+
+.wrapper{ min-height: 50px; height: auto; margin:0px auto; max-width: 1160px; width: 100%; padding: 0px; position: relative;}
+.clear{clear: both;}
+
+/**/
+/** HEADER **/
+/**/
+
+header{ margin: 0 auto; padding: 50px 70px 20px 70px; height: 200px; overflow: hidden; max-width: 1160px; width: 100%;  z-index: 1000000; position: fixed; box-sizing: border-box; }
+
+.logo{display: block; float: left; width: 100px; height: 100px;}
+.top{margin: 0 auto; padding: 0; min-height: 880px; overflow: hidden; position: relative; max-width: 1160px; width: 100%; background-image: url('../img/stars2.png'); background-repeat: no-repeat; background-position: top center;  }
+.scroll{float: left; margin-left: 70px; margin-top: 30px; border: 2px solid #ffffff; width: 15px; height: 15px; border-radius: 25px; opacity: 0;
+
+-webkit-animation-name: scroll_guide; /* Chrome, Safari, Opera */
+-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+animation-name: scroll_guide;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+-webkit-animation-delay: 4s;
+
+}
+
+/**/
+/** NAV **/
+/**/
+
+nav{float: right; height: 100px; padding:0px; margin-top: 5px; width: auto;}
+nav li{display: inline-block; padding-left: 50px; float: right; text-align: right;}
+nav a { line-height: 100px; color:#ffffff; font-size: 12px; font-weight: bold; text-decoration: none;}
+.work nav a{ color: #6d7170;}
+
+/**/
+/** ANIM **/
+/**/
+
+.starsbg{background-image: url('../img/stars.png'); background-position: bottom center; background-repeat: no-repeat;}
+.moon{ width: 120px; height: 120px; position: absolute; left: 83%; top:20%;  background-image: url('../img/moon.png'); background-size: 100px 100px; background-position: center center; background-repeat: no-repeat;
+    -webkit-animation-name: hover; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 8s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: hover;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+.mars{ width: 120px; height: 120px; position: absolute; right: 20%; top: 38%;  background-image: url('../img/mars.png'); background-size: 100px 100px; background-position: center center; background-repeat: no-repeat;
+    -webkit-animation-name: hover; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 8s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: hover;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+.comet{ width: 90px; height: 90px; position: absolute;  opacity: 0; background-image: url('../img/comet.png'); background-size: 50px 50px; background-position: center center; background-repeat: no-repeat; 
+    -webkit-animation-name: comet_fall; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: comet_fall;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 8s; /* Chrome, Safari, Opera */
+    animation-delay: 8s;
+}
+.comet1{left: 0px;} .comet2{left: 360px; -webkit-animation-delay: 15s !important; animation-delay: 15s !important;}
+
+.stone{ width: 50px; height: 50px; position: absolute; left: 65%; top: 58%;  background-image: url('../img/stone_green.png'); background-size: 40px 40px; background-position: center center; background-repeat: no-repeat; }
+.stone2{ width: 50px; height: 50px; position: absolute; left: 63%; top: 78%;  background-image: url('../img/stone_grey.png'); background-size: 40px 40px; background-position: center center; background-repeat: no-repeat;  }
+.stone3{ width: 50px; height: 50px; position: absolute; left: 70%; top: 67%;  background-image: url('../img/stone_pink.png'); background-size: 40px 40px; background-position: center center; background-repeat: no-repeat; }
+.stone4{ width: 50px; height: 50px; position: absolute; left: 74%; top: 87%;  background-image: url('../img/stone_orange.png'); background-size: 40px 40px; background-position: center center; background-repeat: no-repeat; }
+
+.spin_it{
+    -webkit-animation-name: spin;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.spin_it1{ -webkit-animation-duration: 45000ms; -moz-animation-duration: 45000ms; animation-duration: 45000ms;}
+.spin_it2{ -webkit-animation-duration: 30000ms; -moz-animation-duration: 30000ms; animation-duration: 30000ms;}
+.spin_it3{ -webkit-animation-duration: 40000ms; -moz-animation-duration: 40000ms; animation-duration: 40000ms;}
+.spin_it4{ -webkit-animation-duration: 35000ms; -moz-animation-duration: 35000ms; animation-duration: 35000ms;}
+
+.satellite{ width: 1200px; height: 1200px; position: absolute; left: 20%; top: -300px; margin-left: -600px; z-index: 10; background-image: url('../img/satellite.png'); background-size: 1200px 1200px; background-position: center center; background-repeat: no-repeat; }
+.spin_satellite{ -webkit-animation-duration: 100000ms; -moz-animation-duration: 100000ms; animation-duration: 100000ms;}
+
+
+/**/
+/** SUMMARY **/
+/**/
+
+summary{ min-height: 200px; max-width: 700px; padding-left: 70px; width: 100%; z-index: 10000; position: relative; box-sizing: border-box; padding-top: 250px; }
+summary h2{max-width: 500px;}
+
+/**/
+/** MAIN **/
+/**/
+
+main{ width: 100%; position: relative; padding-top: 10px; padding-left: 70px; padding-right: 70px; box-sizing: border-box; overflow: hidden; width: inherit; min-height: 300px;}
+.grid-1{ box-sizing: border-box; width: 32%; position: relative; padding-left: 30px; padding-top: 30px; margin-right: 2%; margin-top: 20px; min-height: 300px; float: left; background-repeat: no-repeat; background-position: center center;  }
+.grid-2{ box-sizing: border-box; width: 32%; position: relative; padding-left: 30px; padding-top: 30px; margin-top: 20px; min-height: 300px; float: left; background-repeat: no-repeat; background-position: center center; }
+.grid-3{ box-sizing: border-box; width: 25%; position: relative; padding-top: 30px; margin-top: 20px; min-height: 300px; float: left; background-repeat: no-repeat; background-position: center center; }
+.grid-4{ box-sizing: border-box; width: 75%; position: relative; padding-left: 30px; padding-top: 30px; margin-top: 20px; min-height: 300px; float: left; background-repeat: no-repeat; background-position: center center; }
+.grid-5{ box-sizing: border-box; width: 32%; padding-left:20px; min-height: 150px; margin-left: 1%; position: relative; float: left;}
+.grid-6{ box-sizing: border-box; width: 49%; padding-top: 30px; min-height: 150px; margin-left: 1%; position: relative; float: right;}
+.grid-7{ box-sizing: border-box; width: 48%; min-height: 150px; margin-left: 1%; position: relative; float: left;}
+.grid-5-first{padding-left: 0px; margin-left: 0px;}
+.grid-5 a{color: #a0a4a3; text-decoration: none;} .grid-5 a:hover{color:#ffffff;}
+.grid-portfolio{ box-sizing: border-box; width: 80%; position: relative; padding-left: 30px; padding-top: 200px; margin-top: 20px; min-height: 300px; float: left; background-repeat: no-repeat; background-position: center center; }
+.grid-portfolio img{margin-bottom: 10px;}
+.grid-portfolio p{text-align: right;}
+.grid-portfolio p a{color: inherit;}
+aside{ margin: 0 auto; padding: 20px 70px; top:160px; min-height: 200px; overflow: hidden; max-width: 1160px; width: 45%;  z-index: 10000; position: fixed; box-sizing: border-box; }
+aside:hover{opacity: 1;}
+.aside-opacity{opacity:.1;}
+.aside-text{width:100%; float: left; padding-top: 20px;}
+.shadow{text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);}
+.aside-details{font-size: 12px; color: #a0a4a3; padding-top: 20px; line-height: 25px;}
+.aside-details a{color: inherit; text-decoration: underline;}
+.aside-details a:hover{color: #ffffff;}
+.aside-icons{font-size: 20px; margin-right: 20px; margin-top: 30px;}
+/*
+article{overflow: hidden;position: relative;}
+article:hover{box-shadow: inset 0px 0px 60px 60px rgba(0,0,0,0.6);}
+article:hover > .article-bottom, article:active > .article-bottom{bottom: 10px; opacity: 1;}
+article:hover > .article-top{ margin-top: 0px; opacity: 1;}
+.article-top{width: 100%; float: left; opacity: 0; height: auto; margin-top: 20px; margin-bottom: 20px; position: relative;}
+.article-bottom{position: absolute; width: 100%; height: 50px; left: 0; padding-left: 20px; bottom: -10px; box-sizing: border-box; opacity: 0;}
+.article-bottom-icon{width: 130px; float: left; height: 50px; margin-right: 10px; opacity: 0.9;}
+.article-bottom-icon:hover{ opacity: 1;}
+.article-bottom-icon img{width: 30px; float: left; margin: 10px 10px 10px 0px;}
+.article-bottom-icon p a{ line-height: 50px; font-size: 15px; color: #ffffff; text-decoration: none;}
+.article-top-bottom{ width: 30px; height: 1px; background-color: #ffffff; position: absolute; bottom: 0;}
+.article-icon{float: left; width: 50px; height: 50px;}
+
+*/
+
+#rockley{ background-image: url('../img/work/rockley.jpg'); background-position: right;}
+#fathom_world_cup{ background-image: url('../img/work/fathom_world_cup.jpg'); background-position: right;}
+#lys{ background-image: url('../img/work/lys.jpg'); background-position: right;}
+#rnli{ background-image: url('../img/work/rnli.jpg'); background-position: right;}
+#adskips{ background-image: url('../img/work/adskips.jpg'); background-position: right;}
+#xplanes{ background-image: url('../img/work/xplanes.jpg'); background-position: right;}
+#lotono{ background-image: url('../img/work/lotono.jpg'); background-position: right;}
+#team_sport{ background-image: url('../img/work/teamsport.jpg'); background-position: right;}
+
+/**/
+/** PROJECTS  **/
+/**/
+
+.about{padding: 150px 70px 50px 70px; float: left; width: 100%; box-sizing: border-box;}
+#contact{padding: 60px 20px 20px 70px !important;}
+#contact .grid-3, #contact .grid-4{min-height: 100px;}
+.portfolio{padding: 250px 70px 50px 70px; float: left; width: 100%; box-sizing: border-box;}
+#instafeed{ box-sizing: border-box; width: 49%; padding-top: 30px; min-height: 150px; position: relative; float: left;}
+#instafeed img{width: 44%; height: auto; float: left; margin-right: 1%; margin-bottom: 5px;}
+#instagram ul, #instagram ul li{list-style-type: none !important;}
+
+
+#projects h2{color: #292a3e; border-bottom: 2px solid #292a3e; width: auto; max-width: 270px; font-weight: bold;}
+#projects h2 a{ text-decoration: none; color:inherit;}
+
+/**/
+/** PORTFOLIO  **/
+/**/
+
+#work{padding: 200px 70px 50px 70px;}
+#work h1, #work-aside h1{float: left; margin-right: 30px; line-height: 75px;}
+#work h1:hover{opacity: 0.2 !important;}
+#work h1 a, #work-aside h1 a{width:auto; float: left; color: #ffffff; text-decoration: none;}
+.work-buttons{float: left;height: 100px; width: 100%;}
+.work-button{float: left; color: #7477af; font-size: 13px; cursor: pointer; text-decoration: none; width: auto; margin-right: 10px; border: 1px solid #7477af; padding: 5px 10px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+
+.active{border: 1px solid #7477af; color:#292a3e; background-color: #7477af; font-size: 13px; padding: 5px 10px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+.active-option{opacity:1 !important;}
+.active-option-off{opacity: 0.2;}
+
+.work-rockley{border-bottom:3px solid #b2c62a;}
+.work-fathom{border-bottom:3px solid #f75325;}
+.work-lys{border-bottom:3px solid #ec1d25;}
+.work-rnli{border-bottom:3px solid #f28200;} 
+.work-adskips{border-bottom:3px solid #b71f24;} 
+.work-xplanes{border-bottom:3px solid #fcff00;} 
+.work-lotono{border-bottom:3px solid #e7eddc;} 
+.work-teamsport{border-bottom:3px solid #c44432;} 
+.work-wilsons{border-bottom:3px solid #00b188;} 
+.work-arenaice{border-bottom:3px solid #25335a;}
+.work-vesper{border-bottom:3px solid #5a6064;} 
+.work-mitchellbridges{border-bottom:3px solid #14c947;} 
+.work-ios{border-bottom:3px solid #2a7c8a;} 
+.work-utilityexchange{border-bottom:3px solid #044d6e;} 
+.work-ai{border-bottom:3px solid #79ad00;} 
+
+
+#portfolio article{width: 100%; height: auto; border-radius: 5px; padding: 0px;}
+#portfolio article .slider{width: 100%; height:auto; background-color: #dedede; border-radius: 5px; float: left; position: relative;}
+.slider img{width: 100%; height: auto; float: left;}
+#projects h2{color: #292a3e; border-bottom: 2px solid #292a3e; width: auto; max-width: 270px; font-weight: bold;}
+.portfolio-info{ width: 100%; height: auto; padding-top: 50px; padding-bottom: 80px; float: left; position: relative;}
+.col3{ width: 33.3%; float: left;}
+.view-site{text-decoration: underline; text-align: right; float: right; color: inherit;}
+.cycle-pager{bottom: 50px; left: 20px; position: absolute; z-index: 10000;}
+.cycle-pager span{ width: 20px; height: 20px; float: left; font-size: 50px; color: #ffffff; text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);}
+
+/**/
+/** FOOTER  **/
+/**/
+
+footer{padding: 100px 70px;}
+.fa{font-size: 30px !important;}
+
+footer p a, footer p{font-size: 14px; color: #a0a4a3; text-decoration: none;}
+.footer-container{width: 50%; position: relative;}
+.footer-left{margin-right: 20px;}
+.footer-right{margin-left: 20px;}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 1050px) {
+
+    aside{width: 75%;}
+    .wrapper{overflow: hidden !important;}
+
+}
+
+@media screen and (max-width: 800px) {
+        
+    h1{font-size: 40px;}
+    h2{font-size: 15px; width: 90%;}
+    h3{font-size: 20px;}
+    h4{font-size: 16px;}
+    h5{font-size: 12px; line-height: 28px;}
+    p{font-size: 12px; line-height: 30px;}
+
+    nav li{padding-left: 35px;}
+
+    .logo{ width: 80px; height: 80px;}
+    nav a{font-size: 11px; line-height: 70px;}
+
+    .satellite{display: none;} 
+
+    summary{max-width: 500px;}
+
+    .grid-3{ width: 10%; }
+    .grid-4{ width: 85%; }
+    .grid-5{ padding-left: 0px; margin-left: 0px; width: 100%; min-height: 20px; }
+    .grid-6{ padding-left: 0px; margin-left: 0px; width: 100%; min-height: 20px; }
+    .grid-5-first{padding-left: 0px; margin-left: 0%;}
+
+    aside{width: 75%;}
+    #instafeed img{width: 40%;}
+
+
+}
+
+@media screen and (max-width: 600px) {
+        
+    header{ padding: 20px 20px; height: auto;}
+    summary{padding-left: 20px; padding-top: 180px; width: 90%}
+    .scroll{margin-left: 20px;}
+    .moon{left: 63%; top:10%;}
+    .mars{right: -5%; top: 40%;}
+
+
+    h1{font-size: 25px; line-height: 40px !important;}
+    h2{font-size: 14px; width: 80%; color: #ffffff;}
+    h3{font-size: 18px;}
+    h4{font-size: 14px;}
+    h5{font-size: 11px; line-height: 28px;}
+    p{font-size: 11px; line-height: 30px;}
+
+    nav li{padding-left: 25px;}
+
+    .logo{ width: 80px; height: 80px;}
+    nav a{font-size: 11px;}
+
+    .satellite{display: none;} 
+    #instafeed img{width: 90%;}
+    #instafeed{width: 100%;}
+
+
+    #work, #about, #services, #experience{padding: 60px 20px 50px 20px;}
+    #contact{padding: 60px 20px 50px 20px !important;}
+    .work-buttons{height: 60px; margin-top: 60px;}
+
+
+    .grid-3{ width: 100%; min-height: 10px; height: auto; }
+    .grid-4{ width: 95%; padding-left: 0px; padding-top: 0px;}
+    .grid-5{ width: 100%; min-height: 20px; }
+    .grid-5-first{padding-left: 0px; margin-left: 0%;}
+
+    aside{ padding: 0px 20px 20px 20px; width: 90%; position: relative; float: left;}
+    .portfolio{padding: 0px 20px 50px 20px;}
+    .grid-portfolio{width: 100%; padding-top: 150px; padding-left: 0px;}
+
+    footer{padding: 100px 20px;}
+
+
+}
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; top: 30px; } to { opacity:1; top: 0px;} }
+@-moz-keyframes fadeIn { from { opacity:0; top: 30px; } to { opacity:1; top: 0px;} }
+@keyframes fadeIn { from { opacity:0; top: 30px; } to { opacity:1; top: 0px;} }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration:0.5s;
+}
+
+@-webkit-keyframes fade-down { from { opacity:0; bottom: 30px; } to { opacity:1; bottom: 0px;} }
+@-moz-keyframes fade-down { from { opacity:0; bottom: 30px; } to { opacity:1; bottom: 0px;} }
+@keyframes fade-down { from { opacity:0; bottom: 30px; } to { opacity:1; bottom: 0px;} }
+
+.fade-down {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fade-down ease-in 1;  /* call our keyframe named fade-down, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fade-down ease-in 1;
+    animation:fade-down ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.5s;
+    -moz-animation-duration:0.5s;
+    animation-duration:0.5s;
+}
+
+/* scroll guide */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes scroll_guide {
+    0%   {opacity: 0;}
+    20%  {opacity: 1;}
+    55%  {margin-top: 100px;}
+    75%  {opacity: 0;}
+    95%  {opacity: 0;}
+    100% {opacity: 0; margin-top: 100px;}
+}
+
+/* planet bounce */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes hover {
+    0%   {opacity: 1; margin-top:10px;}
+    50%  {opacity: 0.9; margin-top:0px;}
+    100% {opacity: 1; margin-top:10px;}
+}
+
+/* Standard syntax */
+@keyframes hover {
+    0%   {opacity: 1; margin-top:10px;}
+    50%  {opacity: 0.9; margin-top:0px;}
+    100% {opacity: 1; margin-top:10px;}
+}
+
+
+/* comet fall */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes comet_fall {
+    0%   {opacity: 0; top: -90px;}
+    15%  {opacity: 1;}
+    25%  {opacity: 0;}
+    30%  {opacity: 0;}
+    100% {opacity: 0; margin-left:720px; top: 720px;}
+}
+
+/* Standard syntax */
+@keyframes comet_fall {
+    0%   {opacity: 0; top: -90px;}
+    15%  {opacity: 1;}
+    25%  {opacity: 0;}
+    30%  {opacity: 0;}
+    100% {opacity: 0; margin-left:720px; top: 720px;}
+}
+
+/* Planet spin */
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+
