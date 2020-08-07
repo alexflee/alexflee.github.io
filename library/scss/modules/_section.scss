@@ -7,20 +7,41 @@
 
 section{
   position: relative;
+  padding: 4vw 17vw 2vw;
+  max-width: 1510px;
 
-  &.padded-section{
-    padding:$f-s 0px;
+  .box{
+    width:100%;
+    position: relative;
 
-    @include mobile{
-      padding:$f-m 0px;
+    &__preview{
+      width:100%;
+      position: relative;
+      min-height: 300px;
+      display: inline-block;
+      background-color: white;
+      border-radius: 3px;
     }
+  }
 
-    @include tablet{
-      padding:$f-xl 0px;
-    }
+  a{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:10px;
+    right:0px;
+  }
 
-    @include desktop{
-      padding:$f-xxl 0px;
-    }
+  h2{
+    color:#111;
+    font-weight: bold;
+    position:relative;
+    margin-top: 2vw;
+    font-family: 'Crimson Text', serif;
+  }
+  h3{
+    color: #777777;
+    font-weight: lighter;
+    font-family: 'Hind Siliguri', sans-serif;
   }
 }

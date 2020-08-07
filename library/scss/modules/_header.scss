@@ -6,58 +6,72 @@
 
 
 .header{
-  z-index: 10000;
-  position: relative;
-  width:100%;
-  height:auto;
-  min-height: 90px;
-  background-color: transparent;
-  @include transition(all, 1s, ease-in-out);
+  font-size: 1.2vw;
+  line-height: 1.3em;
+  padding: 20vw 17vw 2.5vw;
+  max-width: 1510px;
+
+  .information-more{
+    padding-top: 3vw;
+    p{
+      font-size: 1.6vw;
+      line-height: 3vw;
+    }
+  }
 
   a{
-    text-decoration: none;
+    cursor: pointer;
   }
 
-  &--fixed{
-    top:0px;
-    margin-top:0px;
-    position:fixed;
-  }
-
-  &--reduce{
-
-    background-color:rgba(255, 255, 255, 1);
-    @include transition(all, 1s, ease-in-out);
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-
-    .main-nav{
-
-      #logo{
-        background-image: url('../images/logo.png');
-        @include transition(all, 1s, ease-in-out);
-      }
-
-      #nav-icon{
-        span{
-          background-color: $black;
-        }
-      }
-
-      .main-nav__navigation{
-        li{
-          a{
-            @include transition(all, 1s, ease-in-out);
-            color:$brand-primary;
-            &:hover{
-              color:$brand-primary;
-            }
-          }
-        }
+  h1{
+    font-weight: 400;
+    color:#292A2C;
+    font-family: 'Crimson Text', serif;
+    b{
+      font-weight: inherit;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        right: 0;
+        left: 0;
+        height: 3px;
+        background: #758498;
+        z-index: -1;
+        opacity: 0.2;
       }
     }
+    a{
+      color:#000000;
+      text-decoration: underline;
+      position:relative;
+      cursor: pointer;
 
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .information-more{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+
+    p{
+      margin-bottom: 1vw;
+      color: rgb(116, 130, 151);
+    }
+
+    a{
+      color:#000000;
+      text-decoration: underline;
+      position:relative;
+      font-weight: bold;
+    }
   }
 
 }
