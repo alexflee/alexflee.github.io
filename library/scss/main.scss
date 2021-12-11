@@ -13,8 +13,12 @@ Modules files
 *********************/
 
 @import "modules/header";
+@import "modules/navigation";
+@import "modules/banner";
+@import "modules/breadcrumbs";
+@import "modules/animation";
 @import "modules/footer";
 @import "modules/reset";
 @import "modules/grid";
-@import "modules/displays";
-@import "modules/section";
+@import "modules/colors";
+@import "modules/typography";

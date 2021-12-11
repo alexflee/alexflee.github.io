@@ -1,5 +1,7 @@
 const mix = require('laravel-mix').mix;
 
+//run npm run watch
+
 mix.scripts([
   'library/js/vendor/*.js',
   'library/js/libs/*.js',
@@ -12,7 +14,7 @@ mix.sass('library/scss/main.scss', 'library/css/main.css')
   });
 
   mix.browserSync({
-     proxy: 'http://localhost:8888/PERSONAL/yourhealth/your-health-website/',
+     proxy: 'http://localhost:8888/portfolio/',
      files: [
        '*.html',
        '*.php',

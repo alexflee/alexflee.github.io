@@ -35,7 +35,6 @@ footer, header, hgroup, main, menu, nav, section {
 }
 
 html {
-  font-size: 14px; // Base font size
   box-sizing: border-box;
 }
 
@@ -43,6 +42,153 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  line-height: 2rem;
+	color:#252422;
+	background: white;
+}
+
+.border-top{
+	border-top:3px solid #D0D1D2;
+	padding-bottom: 30px;
+}
+
+section{
+	padding:0px 0px 20px;
+	float: left;
+	width:100%;
+}
+
+main{
+	padding: 30px 0px 20px ;
+  float: left;
+  width: 100%;
+
+	&#portfolio{
+		padding-top:50px;
+	}
+
+	&#about{
+		padding-top:50px;
+
+		h3{
+			margin-top: 0px;
+		}
+
+		p{
+			font-size: 20px;
+			line-height: 40px;
+			color:#2d2d2d;
+		}
+	}
+
+	.picture{
+		margin:30px 0px;
+	}
+
+}
+
+a.link{
+	font-size: 16px;
+	color:#0073B1;
+	font-weight: 600;
+	background-image: url(../images/arrow.svg);
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 16px;
+	padding-right: 30px;
+}
+
+article{
+	padding:0px 0px 20px 0px;
+	float: left;
+	width: 100%;
+
+	img{
+		margin-bottom: 10px;
+	}
+
+	p{
+		color:#010101;
+		font-size: 15px;
+		line-height: 24px;
+		font-weight: normal;
+	}
+
+	.article__underline{
+		border-bottom:1px solid #dedede;
+		width:100%;
+		float: left;
+		margin-bottom: 40px;
+
+		&.big{
+			border-bottom:5px solid #dedede;
+		}
+	}
+}
+
+figure{
+	figcaption {
+	    background-color: #222;
+	    color: #fff;
+	    font: italic smaller sans-serif;
+	    padding: 3px;
+	    text-align: center;
+	}
+}
+
+main{
+	figure{
+		margin-top: 50px;
+		figcaption{
+			color:black;
+			background:none;
+			margin-top: 10px;
+			margin-bottom: 40px;
+			font:inherit;
+			font-weight: 500;
+			text-align: left;
+		}
+	}
+}
+
+.other{
+	margin-top: 20px;
+	.container{
+		padding-top: 40px;
+		border-top:2px solid #dedede;
+	}
+}
+
+
+.visually-hidden{
+		position: absolute !important;
+	  width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+}
+
+button{
+	color: #0073B1;
+  font-size: 20px;
+  padding-right: 30px;
+  background-image: url(../images/arrow.svg);
+  background-position: center right;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+}
+
 
 
 ol {

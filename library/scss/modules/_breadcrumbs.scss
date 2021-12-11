@@ -1,0 +1,30 @@
+//****************
+// Breadcrumb Styles
+//****************
+
+
+
+.breadcrumbs{
+
+  background-color:$brand-tertiary;
+  margin-bottom: 15px;
+
+  ul.breadcrumb {
+      padding: 12px 16px 12px 0px;
+      list-style: none;
+      //margin-top:77px;
+      margin-left:0px;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    color:$white;
+  }
+  ul.breadcrumb li+li:before {
+      padding: 8px;
+      content: "\f105"; /* FontAwesome Unicode */
+      font-family: FontAwesome;
+      color:$brand-secondary;
+  }
+  ul.breadcrumb li a {color: $white; text-decoration: underline;}
+
+}

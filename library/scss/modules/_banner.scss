@@ -1,0 +1,69 @@
+//****************
+// Banner Styles
+//****************
+
+
+
+
+/*********************
+Banner
+*********************/
+
+.banner{
+  padding-top:30px;
+  min-height: 100px;
+  text-align: left;
+  padding-bottom: 30px;
+  background: #EEFBFF;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include mobile{
+    padding-top:10px;
+  }
+
+  @include tablet{
+    padding-top:50px;
+    padding-bottom: 80px;
+  }
+
+  &.home{
+    margin-bottom:80px;
+
+    @include tablet{
+      padding-top:100px;
+      padding-bottom: 180px;
+    }
+  }
+
+  h1{
+    width:100%;
+    float: left;
+    b{
+      font-weight:500;
+      float: left;
+    }
+    span{
+      float: left;
+      display: inline-block;
+      width: 72px;
+      height: 2px;
+      margin: 25px 0px 0px 25px;
+      background-color: #001828;
+    }
+  }
+
+  .picture{
+    width: 380px;
+    height: 380px;
+    margin-right: 100px;
+    margin-top: 0px;
+    background: white;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+    -webkit-box-shadow: 2px 2px 5px 2px #dedede;
+    box-shadow: 2px 2px 5px 2px #dedede;
+  }
+
+}

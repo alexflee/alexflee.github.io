@@ -1,0 +1,54 @@
+//****************
+// Project Colors
+//****************
+
+
+
+
+/*********************
+Colour modifier
+*********************/
+
+@each $color, $hex in $colors {
+ .c--#{$color} {
+   color: $hex;
+ }
+}
+
+/*********************
+BG Colour modifier
+*********************/
+
+@each $color, $hex in $colors {
+ .bg--#{$color} {
+   background-color: $hex;
+ }
+}
+
+/*********************
+Border modifier(s)
+*********************/
+
+@each $color, $hex in $colors {
+ .border-top--#{$color} {
+   border-top: 1px solid $hex;
+ }
+}
+// Create 'border color' modifier classes based on map in config
+@each $color, $hex in $colors {
+ .border-right--#{$color} {
+   border-right: 1px solid $hex;
+ }
+}
+
+@each $color, $hex in $colors {
+ .border-bottom--#{$color} {
+   border-bottom: 1px solid $hex;
+ }
+}
+
+@each $color, $hex in $colors {
+ .border-left--#{$color} {
+   border-left: 1px solid $hex;
+ }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <title>Alex Lee Design - Senior Service Designer based in Nottingham, UK.</title>
+
+        <!-- Main Stylesheets -->
+        <link href="../library/css/main.css" rel="stylesheet">
+
+        <!-- Fontawesome Stylesheet  -->
+        <link href="../library/css/font-awesome.css" rel="stylesheet">
+
+        <link rel="shortcut icon" type="image/png" href="../favicon.ico"/>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body role="document">
+
+
+  <header class="header">
+    <div class="container">
+
+      <nav role="navigation" class="main-nav">
+
+            <div class="row">
+              <div class="col-xs-5 col-sm-6">
+                <p id="logo">
+                  Alex Lee design
+                </p>
+              </div>
+
+              <div class="col-xs-7 col-sm-6">
+
+                <div class="nav-container">
+
+                  <ul class="l--inline main-nav__navigation">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+
+          </div>
+
+      </nav>
+
+
+
+    </div>
+
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-push-1 col-md-push-2">
+          <h1>
+            Designing the emergency driving test service
+          </h1>
+          <h2>
+            A case study talking through the design decisions that helped a team deliver an emergency service in just 34 days.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <main>
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-push-1 col-md-push-2">
+
+          <h3>
+            Introduction
+          </h3>
+
+          <p>
+            This case study is very similar to an <a href="https://designnotes.blog.gov.uk/2021/04/29/designing-at-pace-at-the-driver-and-vehicle-standards-agency-dvsa/"> article featured in the Design in Government GOV.UK blog</a> that I was part of which covers the same service. This case study is more focussed on my involvement throughout the project, whereas the Designing at pace at the Driver and Vehicle Standards Agency (DVSA) blog gives a broad overview of the story behind the service.
+          </p>
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/DVSA-emergency-driving-test-service.jpg" alt="a picture of the GOV.UK page for emergency driving tests for critical workers, with documentation of the work in the background." width="100%"/>
+              <figcaption>a picture of the GOV.UK page for emergency driving tests for critical workers, with documentation of the work in the background.</figcaption>
+            </figure>
+          </div>
+
+          <h3>The situation</h3>
+
+          <p>
+            On 23rd March 2020, for the third time in its 85-year history, the driving test service was suspended because of the coronavirus (COVID-19) pandemic.
+          </p>
+
+          <p>
+            Initially, guidance was provided on GOV.UK to enable critical workers to book a test by contacting a DVSA email. However, due to a high demand of emails being received (c40k) that were being manually processed, it was decided an alternative had to be created!
+          </p>
+
+          <p>
+            The decision was made to design, prototype and build a temporary replacement service that could enable people that were critical workers to still apply for practical and theory tests. I was brought in as the Service Designer on the team to help create this service that would enable critical workers to apply for tests and to alleviate the demand on manual processing.
+          </p>
+
+          <h3>The task</h3>
+
+          <p>
+            My role in the project was to work closely with the user researcher, content designers, developers and stakeholders to ensure all the user needs were taken into account, and to also design, build and iterate a prototype of what the final solution should be.
+          </p>
+
+          <h3>Discovery phase</h3>
+
+          <p>
+            Initially, I worked closely with the user researcher on the project to gather all known research and data on the current driving and theory tests services to understand what information was needed from the user, but also if there were any notable pain points along the journey that could be improved on in the emergency test service.
+          </p>
+          <p>
+            We also spoke to the DVSA team responsible for manually processing the email applications to understand if they had any user feedback or thoughts on what should be included in the digital service that would help processing times. A notable example of what was causing a lot of stress was the amount of tests cancelled because of the pandemic, and therefore a great output of this discussion was to ask users for a reference number that was sent with cancellations before submitting!
+          </p>
+          <p>
+            Secondly, I organised a brainstorming session with the team and stakeholders to discuss what types of evidence users could provide to show that they were critical workers. This allowed us to build a picture of the variety of evidence that existed within all the following sectors:
+          </p>
+
+          <ul>
+            <li>health and social care</li>
+            <li>education and childcare</li>
+            <li>key public services</li>
+            <li>local and national government</li>
+            <li>food and other necessary goods</li>
+            <li>public safety and national security</li>
+            <li>transport</li>
+            <li>utilities, communication and financial services</li>
+          </ul>
+
+          <p>
+            From here, we put together the following user needs that we could use as guidelines for the project.
+          </p>
+
+          <h4>User needs</h4>
+
+          <h5>Critical worker user need</h5>
+
+          <p>
+            As a key worker without a full driving licence I need to book a theory or practical driving test as soon as possible to enable me to travel to and from, or for work purposes.
+          </p>
+
+          <p>
+            Need is met when the user:
+          </p>
+
+          <ul>
+            <li>knows if they meet the eligibility criteria for an emergency test</li>
+            <li>can apply for emergency test</li>
+            <li>knows what happens when they've applied</li>
+            <li>can take their test if they meet the eligibility criteria</li>
+          </ul>
+
+          <h5>DVSA Deployment team user need</h5>
+
+          <p>
+            As a member of the DVSA Deployment team I need to be able to prioritise and process driving test requests from key workers as quickly as possible.
+          </p>
+          <p>
+            Need is met when the user:
+          </p>
+          <ul>
+            <li>has a complete application to process</li>
+            <li>can quickly match the candidate's request against an available driving examiner</li>
+            <li>is able to easily keep track of new applications and completed applications</li>
+          </ul>
+
+          <p>
+            With our user needs finalised, and the demand for working at pace, we started thinking about the design as we had a good understanding of the following:
+          </p>
+
+          <ul>
+            <li>what worked before on the practical and theory tests services</li>
+            <li>what didn’t work so well on the practical and theory test services</li>
+            <li>what evidence critical workers could provide</li>
+            <li>what was causing problems in the manual processing</li>
+          </ul>
+
+          <h3>
+            Designing the service
+          </h3>
+
+          <p>
+            The first thing I wanted to establish in the design was the priority the questions should be asked in. Thankfully, we had a pretty good idea of what information we needed from the user for a practical and theory test, but we also needed to take into account how we figured out if the user was a critical worker, and if they had been affected by cancellations because of covid-19.
+          </p>
+
+          <p>
+            As only critical workers were being allowed to book tests, we decided to find out if the user was a critical worker first, to prevent anyone from trying to apply who did not meet the criteria. This was followed with contact information, just in case the user dropped off the service and needed to be contacted, and finally followed by all test related questions.
+          </p>
+
+          <p>
+            This prioritisation in the user journey allowed us to eliminate any users who were not critical workers first, and also allowed us to contact users if they left the online service without completing it.
+          </p>
+
+          <p>
+            With this in mind, I put together a user journey map of the proposed service to run past the team before designing the service.
+          </p>
+
+          <h3>How we kept stakeholders informed on the project progress</h3>
+
+          <p>
+            I recorded all workshops, meetings and prototype versions in Miro - this soon became the foundation for documenting our work as it provided a suite of useful features that enabled us to build a comprehensive and shareable resource.
+          </p>
+
+          <p>
+            For the designs, I initially identified 4 core areas for our documentation that would give the team and stakeholders the required information to learn about the project and the latest changes. These were user journeys, design changes, useful links and next steps.
+          </p>
+
+          <p>
+            These 4 core areas were grouped horizontally and were presented chronologically to highlight the key changes, thus providing the team with all the information they would need.
+          </p>
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/swimlanes.jpg" alt="An example of 2 swimlanes in our online board, presenting the work in 2 iterations." width="100%"/>
+              <figcaption>a picture of the GOV.UK page for emergency driving tests for critical workers, with documentation of the work in the background.</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            This was crucial in ensuring clarity whilst designing at pace, as team members could browse the resource to understand not only the latest version, but the iterations beforehand. This documentation structure also allowed users to understand how the design had evolved over time, as reading from the top down told the story of the service and our thinking at the time.
+          </p>
+
+          <h3>Prototyping the service</h3>
+
+          <p>
+            As we had prior knowledge of how this service should work, and the questions we should ask, I decided to jump straight into the prototyping stage by taking advantage of the resources provided by GDS, the GOV.UK Design System and the GOV.UK Prototype Kit.
+          </p>
+
+          <p>
+            I added JavaScript to the prototype to create an interactive user journey that included error messaging and dynamic components. This allowed the team to understand the different user journeys depending on the users’ actions and gave the team a much clearer view of how the pages should work.
+          </p>
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/prototype.gif" alt="An example of how our error messaging functionality worked on the prototype to give the team an idea of how the page should work." width="100%"/>
+              <figcaption>An example of how our error messaging functionality worked on the prototype to give the team an idea of how the page should work.</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            We used our documentation to record our journeys, and Heroku to share them. This allowed the team to understand how the new service should work and was a great way to get feedback.
+          </p>
+
+          <p>
+            By creating high-fidelity prototypes and updating the user journey maps regularly, we quickly established a working style that enabled the team to see the latest user journey, provide feedback on this journey, and view the proposed next steps. This provided all members of the team and stakeholders one resource they could rely on to view the progress of work.
+          </p>
+
+          <h3>Expanding our documentation style</h3>
+
+          <p>
+            When we launched the service, I built upon the documentation structure by also introducing design and development lanes into our process. This quickly became a simple and effective way to illustrate the relationship between launches and exploratory work. By clearly defining the nature of the swim lane, users could jump straight to the live version or understand the exploratory work that happened in between.
+          </p>
+
+          <p>
+            After the initial launch, each design lane highlighted the research and design ideas we had at the time and would eventually ‘merge’ into the development lanes to form the latest iteration.
+          </p>
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/swimlanes2.jpg" alt="An example of multiple development lanes in green, and design lanes in blue, and the relationship between the work." width="100%"/>
+              <figcaption>An example of multiple development lanes in green, and design lanes in blue, and the relationship between the work.</figcaption>
+            </figure>
+          </div>
+
+          <p>
+            This became the chosen material for reviewing the prototype with stakeholders, and if needed we could jump between versions of the prototype using Heroku’s version control feature.
+          </p>
+
+          <h3>What we adapted after go live - build, measure, learn!</h3>
+
+          <p>
+            Another important step in our design process for this piece of work was adapting quickly to the information we received on the service after its initial launch. On a daily basis we would discuss the latest user feedback, and as a team establish any patterns for concern and improvements that could be made.
+          </p>
+
+          <p>
+            This feedback was added to our online documentation tool, inside of our swim lanes, to show everyone involved the problems we found, our initial ideas and concepts, and the design decisions that took place. This level of detail further illustrated to stakeholders how we measured, learned, and thus adapted the service based on the information we received.
+          </p>
+
+          <p>
+            The key feature we updated based on user feedback was to the email address question page, as users were not receiving their email confirmations.
+          </p>
+
+          <h4>How we approached the problem with email addresses</h4>
+
+          <p>
+            Soon after launching the service we had feedback from the DVSA customer contact centre that users were getting frustrated because they had not received email confirmation of their tests being booked.
+          </p>
+
+          <p>
+            After reaching out to users who had this problem with the user researcher, and cross referencing their details with submissions on the service, we soon realised that the majority were actually typing their emails incorrectly!
+          </p>
+
+          <p>
+            To help resolve this issue we initially reached out to the cross-government community to see if any other services had a similar problem. Thankfully, Alpha Gov had been working on an email replay component, which we learnt from and adapted to work in our service. The component repeated the email address to the user with the inset text component, but it also included an AJAX call to a list of popular typos that would check for possible errors. This improved the email quality on our service dramatically, and has since been put forward to be reviewed by the DVSA design system team.
+          </p>
+
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/email.gif" alt="An example of the email replay functionality, repeating what the user had entered in larger text to help show any possible typos. " width="100%"/>
+              <figcaption>An example of the email replay functionality, repeating what the user had entered in larger text to help show any possible typos. </figcaption>
+            </figure>
+          </div>
+
+          <p>
+            Once improvements were added to the service, we introduced alert cards into our documentation to indicate the feature had been added. This was a great way to indicate what had ‘merged’ into the development swimlanes once we were happy with the work in the design phase. From here, we were able to use our design history alongside service metrics to gauge the change in performance on our service once features had been pushed to live, as we had a clear idea of the timeline.
+          </p>
+
+          <div class="picture">
+            <figure>
+              <img src="../library/images/work_emergency/cards.jpg" alt="An example of how we used cards under the launch versions in our documentation to quickly show the team what features had been added to the latest version of the service." width="100%"/>
+              <figcaption>An example of how we used cards under the launch versions in our documentation to quickly show the team what features had been added to the latest version of the service.</figcaption>
+            </figure>
+          </div>
+
+          <h3>Conclusion of the project</h3>
+
+          <p>
+            The temporary replacement service was launched in 34 days, ran from 23 March 2020 to 14 August 2020, and helped 30,000 critical workers to book a driving test.
+          </p>
+
+          <p>
+            It also became the first COVID-19-related service across government to go live, and helped 110,000 users apply for a practical or theory test.
+          </p>
+
+          <p>
+            The lessons learned from putting this service together have since been integrated into our ways of working in DVSA, especially our documentation approach and the email replay component functionality.
+          </p>
+
+          <p>
+            On a personal note, this has been one of my proudest achievements at DVSA as we were able to still provide a service for critical workers at such a difficult time, and learn from the process at the same time!
+          </p>
+
+      </div>
+
+    </div>
+  </main>
+
+  <section class="other">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-push-1 col-md-push-2">
+          <h3>
+            Other case studies
+          </h3>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-push-1 col-md-push-2">
+          <div class="row">
+
+            <article class="col-xs-12">
+              <h5>
+                  <a href="#">Right first time - an MVP approach to improving the quality of applications on the Vehicle Operator Licence (VOL) service</a>
+              </h5>
+              <p>
+                In this blog post, senior service designer Alex Lee documents the design decisions that helped a team deliver an emergency service in just 34 days.
+              </p>
+            </article>
+
+            <article class="col-xs-12">
+              <h5>
+                  <a href="#">Improving the accessibility of the Vehicle operator licencing (VOL) service</a>
+              </h5>
+              <p>
+                In this blog post, senior service designer Alex Lee documents the design decisions that helped a team deliver an emergency service in just 34 days.
+              </p>
+            </article>
+
+            <article class="col-xs-12">
+              <h5>
+                  <a href="#">Creating the foundations for a DVSA design system</a>
+              </h5>
+              <p>
+                In this blog post, senior service designer Alex Lee documents the design decisions that helped a team deliver an emergency service in just 34 days.
+              </p>
+            </article>
+
+            <article class="col-xs-12">
+              <h5>
+                  <a href="#">Acquired Rights - apply to become a temporary transport manager service</a>
+              </h5>
+              <p>
+                In this blog post, senior service designer Alex Lee documents the design decisions that helped a team deliver an emergency service in just 34 days.
+              </p>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- footer -->
+
+  <footer role="contentinfo" class="footer">
+
+      <div class="container">
+
+          <div class="row equal">
+
+            <div class="col-xs-12 col-sm-6">
+              <p class="footer__left">Alex Lee Design</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+              <nav role="navigation" class="footer-nav">
+
+                  <ul class="l--inline">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                  </ul>
+
+              </nav>
+            </div>
+
+          </div>
+
+      </div>
+
+  </footer>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../library/js/dist/main.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr8xNQQZPI5Ruze-UB1RrFDwCPv82Jdog&callback=initMap" async defer></script>
+
+  </body>
+</html>

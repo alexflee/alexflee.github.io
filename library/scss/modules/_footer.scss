@@ -6,19 +6,35 @@
 
 
 .footer{
-  background-color: white;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #F0F0F0;
+  border-top: 1px solid #C2C2C2;
+  color:black;
+  clear: both;
 
-  p{
-    font-size: 1.5vw;
-    color:white;
-    a{
-      color:white;
+  ul{
+    list-style: none;
+    li{
+      a{
+        //color: black;
+        font-size: 16px;
+        font-weight: normal;
+        text-decoration: underline;
+      }
     }
   }
 
-  &__text{
-    line-height: 70px;
+
+  &__left{
+    line-height: 30px;
+    text-align: left;
+  }
+
+  &__right{
+    line-height: 30px;
     text-align: left;
 
     @include mobile{
@@ -26,8 +42,4 @@
     }
   }
 
-  &__logo{
-    max-width: 50px;
-    margin-bottom: 10px;
-  }
 }
