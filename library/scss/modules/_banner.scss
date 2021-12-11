@@ -28,11 +28,16 @@ Banner
   }
 
   &.home{
-    margin-bottom:80px;
+    margin-bottom:0px;
+
+    @include mobile{
+      margin-bottom:40px;
+    }
 
     @include tablet{
       padding-top:100px;
       padding-bottom: 180px;
+      margin-bottom:80px;
     }
   }
 
@@ -54,16 +59,34 @@ Banner
   }
 
   .picture{
-    width: 380px;
-    height: 380px;
-    margin-right: 100px;
+    width: 100%;
+    height: auto;
+    margin-right: 30px;
     margin-top: 0px;
     background: white;
-    position: absolute;
+    position: relative;
+    float: left;
     right: 0px;
-    top: -20px;
+    top: 10px;
     -webkit-box-shadow: 2px 2px 5px 2px #dedede;
     box-shadow: 2px 2px 5px 2px #dedede;
+
+    @include mobile{
+      float: none;
+      width: 280px;
+      height: 280px;
+      margin-right: 40px;
+      position: absolute;
+    }
+
+    @include tablet{
+      width: 380px;
+      height: 380px;
+      margin-right: 100px;
+      top: -20px;
+
+    }
+
   }
 
 }

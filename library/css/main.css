@@ -166,13 +166,20 @@ Banner
 }
 
 .banner.home {
-  margin-bottom: 80px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .banner.home {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 992px) {
   .banner.home {
     padding-top: 100px;
     padding-bottom: 180px;
+    margin-bottom: 80px;
   }
 }
 
@@ -196,15 +203,35 @@ Banner
 }
 
 .banner .picture {
-  width: 380px;
-  height: 380px;
-  margin-right: 100px;
+  width: 100%;
+  height: auto;
+  margin-right: 30px;
   margin-top: 0px;
   background: white;
-  position: absolute;
+  position: relative;
+  float: left;
   right: 0px;
-  top: -20px;
+  top: 10px;
   box-shadow: 2px 2px 5px 2px #dedede;
+}
+
+@media (min-width: 768px) {
+  .banner .picture {
+    float: none;
+    width: 280px;
+    height: 280px;
+    margin-right: 40px;
+    position: absolute;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner .picture {
+    width: 380px;
+    height: 380px;
+    margin-right: 100px;
+    top: -20px;
+  }
 }
 
 .breadcrumbs {
