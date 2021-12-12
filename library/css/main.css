@@ -403,6 +403,8 @@ Delays
 
 .footer ul {
   list-style: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
 
 .footer ul li a {
@@ -490,6 +492,21 @@ main#portfolio {
   padding-top: 50px;
 }
 
+main#portfolio h3 {
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+
+main#portfolio .portfolio-side p {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  main#portfolio .portfolio-side p {
+    font-size: 22px;
+  }
+}
+
 main#about {
   padding-top: 50px;
 }
@@ -527,13 +544,6 @@ article {
 
 article img {
   margin-bottom: 10px;
-}
-
-article p {
-  color: #010101;
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: normal;
 }
 
 article .article__underline {
@@ -2107,7 +2117,26 @@ p.alt {
 
 ul {
   padding-left: 20px;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  ul {
+    font-size: 18px;
+  }
+}
+
+ol {
+  padding-left: 20px;
+  list-style-type: auto;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  ol {
+    font-size: 18px;
+  }
 }
 
 .date {

@@ -114,7 +114,22 @@ p{
 
 ul{
   padding-left:20px;
-  font-size: 18px;
+  font-size: 16px;
+
+  @include mobile{
+    font-size: 18px;
+  }
+}
+
+ol{
+  padding-left:20px;
+  list-style-type: auto;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  @include mobile{
+    font-size: 18px;
+  }
 }
 
 .date{
