@@ -46,6 +46,7 @@ Modules files
   padding: 0px 0px 0px;
   display: inline-block;
   background: white;
+  border-bottom: 1px solid #e0e7e9;
   float: left;
 }
 
@@ -82,7 +83,7 @@ Modules files
 
 @media (min-width: 768px) {
   .header #logo {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
