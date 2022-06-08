@@ -28,7 +28,7 @@ h1{
   font-size: 24px;
   line-height: 43px;
   font-weight: 600;
-  color: #001828;
+  color: #2B3446;
 
   @include mobile{
     font-size: 28px;
@@ -44,7 +44,7 @@ h2{
   font-size: 20px;
   font-weight: normal;
   line-height: 30px;
-  color: #001828;
+  color: #2B3446;
 
   @include mobile{
     font-size: 21px;
@@ -160,10 +160,12 @@ a {
   &:hover {
     text-decoration: underline;
     cursor: pointer;
+    color:darken(#0073B1, 20%);
   }
 
   &:active, &:focus{
-    background:#D7FB53;
+    //background:#D7FB53;
+    outline: 3px solid #ffd346;
     color:inherit;
     text-decoration: underline;
 

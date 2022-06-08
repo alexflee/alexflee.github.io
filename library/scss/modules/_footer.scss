@@ -6,12 +6,12 @@
 
 
 .footer{
-  padding-bottom: 50px;
-  padding-top: 40px;
+  padding-bottom: 100px;
+  padding-top: 90px;
   font-size: 18px;
   font-weight: 500;
   background: #F0F0F0;
-  border-top: 1px solid #C2C2C2;
+  border-radius: 10px 10px 0px 0px;
   color:black;
   clear: both;
 
@@ -19,7 +19,7 @@
     list-style: none;
     padding-left: 0px;
     margin-bottom: 0px;
-    
+
     li{
       a{
         //color: black;
