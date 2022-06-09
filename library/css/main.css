@@ -46,6 +46,7 @@ Modules files
   padding: 0px 0px 0px;
   display: inline-block;
   background: white;
+  border-bottom: 1px solid #e0e7e9;
   float: left;
 }
 
@@ -82,7 +83,7 @@ Modules files
 
 @media (min-width: 768px) {
   .header #logo {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -149,7 +150,6 @@ Banner
   background: #F2F6FA;
   position: relative;
   margin-bottom: 20px;
-  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
@@ -398,9 +398,17 @@ Delays
   font-size: 18px;
   font-weight: 500;
   background: #F0F0F0;
-  border-radius: 10px 10px 0px 0px;
+  float: left;
+  width: 100%;
   color: black;
   clear: both;
+  border-top: 1px solid #e0e7e9;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    margin-top: 30px;
+  }
 }
 
 .footer ul {
@@ -485,9 +493,13 @@ section {
 }
 
 main {
-  padding: 30px 0px 20px;
+  padding: 0px 0px 20px;
   float: left;
   width: 100%;
+}
+
+main h2, main h3, main h4 {
+  margin-top: 2.3rem;
 }
 
 main#portfolio {

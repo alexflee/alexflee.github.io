@@ -11,9 +11,16 @@
   font-size: 18px;
   font-weight: 500;
   background: #F0F0F0;
-  border-radius: 10px 10px 0px 0px;
+  //border-radius: 10px 10px 0px 0px;
+  float: left;
+  width:100%;
   color:black;
   clear: both;
+  border-top:1px solid #e0e7e9;
+
+  @include mobile{
+    margin-top: 30px;
+  }
 
   ul{
     list-style: none;
