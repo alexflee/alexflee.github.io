@@ -2144,6 +2144,7 @@ ol {
   list-style-type: auto;
   font-size: 16px;
   margin-bottom: 20px;
+  list-style: decimal;
 }
 
 @media (min-width: 768px) {

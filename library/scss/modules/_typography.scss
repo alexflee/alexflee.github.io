@@ -126,6 +126,7 @@ ol{
   list-style-type: auto;
   font-size: 16px;
   margin-bottom: 20px;
+  list-style: decimal;
 
   @include mobile{
     font-size: 18px;
