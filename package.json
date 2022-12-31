@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "laravel-mix": "^0.8.1"
+    "laravel-mix": "^6.0.49"
   }
 }
