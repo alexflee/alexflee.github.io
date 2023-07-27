@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Designing and prototyping the emergency driving test service</title>
+        <!-- Main Stylesheets -->
+		<link rel="stylesheet" href="/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+
+    <body role="document">
+
+
+		<section id="skip">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<a class="button" href="#main-content">Skip to main content</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<header class="header">
+			
+			<div class="container">
+
+				<div class="row">
+					<div class="col-xs-12">
+						<nav role="navigation" class="main-nav">
+							<div id="logo">
+								<p><a href="/">Alex lee design</a></p>
+							</div>
+							<div class="nav-container">
+								<ul class="l--inline main-nav__navigation">
+									<li><a href="/">Home</a></li>
+									<li><a href="/work">Work</a></li>
+									<li><a href="/blog">Blog</a></li>
+								</ul>
+							</div>
+							<div id="toggle">
+								<p id="toggle-change" aria-atomic="true" class="hidden-text" aria-live="polite"><b id="toggle-change-type"></b> theme activated</p>
+								<button id="toggle-theme-colour" type="button" role="button" class="">
+									<span class="hidden-text">Activate dark theme</span>
+									
+									<svg id="dark" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.589 21.659c-3.873 1.038-8.517-.545-10.98-3.632a1 1 0 0 1 .751-1.623c3.984-.118 6.662-1.485 8.17-4.098 1.51-2.613 1.354-5.616-.535-9.125a1 1 0 0 1 1.03-1.463c3.904.59 7.597 3.82 8.635 7.694 1.43 5.334-1.737 10.818-7.071 12.247z" fill="#000000"/></svg>
+									<svg version="1.0" id="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+										width="25px" height="25px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+									<g>
+										<circle fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" cx="32.003" cy="32.005" r="16.001"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.001,31.997c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4
+											s1.789,4,4,4h4C10.212,35.997,12.001,34.208,12.001,31.997z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.204,46.139l-2.832,2.833c-1.563,1.562-1.563,4.094,0,5.656
+											c1.562,1.562,4.094,1.562,5.657,0l2.833-2.832c1.562-1.562,1.562-4.095,0-5.657C16.298,44.576,13.767,44.576,12.204,46.139z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,51.999c-2.211,0-4,1.789-4,4V60c0,2.211,1.789,4,4,4
+											s4-1.789,4-4l-0.004-4.001C36.003,53.788,34.21,51.999,32.003,51.999z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,46.143c-1.559-1.566-4.091-1.566-5.653-0.004
+											s-1.562,4.095,0,5.657l2.829,2.828c1.562,1.57,4.094,1.562,5.656,0s1.566-4.09,0-5.656L51.798,46.143z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M60.006,27.997l-4.009,0.008
+											c-2.203-0.008-3.992,1.781-3.992,3.992c-0.008,2.211,1.789,4,3.992,4h4.001c2.219,0.008,4-1.789,4-4
+											C64.002,29.79,62.217,27.997,60.006,27.997z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,17.859l2.828-2.829c1.574-1.566,1.562-4.094,0-5.657
+											c-1.559-1.567-4.09-1.567-5.652-0.004l-2.829,2.836c-1.562,1.555-1.562,4.086,0,5.649C47.699,19.426,50.239,19.418,51.798,17.859z"
+											/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,11.995c2.207,0.016,4-1.789,4-3.992v-4
+											c0-2.219-1.789-4-4-4c-2.211-0.008-4,1.781-4,3.993l0.008,4.008C28.003,10.206,29.792,11.995,32.003,11.995z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.212,17.855c1.555,1.562,4.079,1.562,5.646-0.004
+											c1.574-1.551,1.566-4.09,0.008-5.649l-2.829-2.828c-1.57-1.571-4.094-1.559-5.657,0c-1.575,1.559-1.575,4.09-0.012,5.653
+											L12.212,17.855z"/>
+									</g>
+									</svg>
+								</button>
+							</div>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+
+		</header>
+
+		<section id="article" class="">
+    <div class="container">
+      <div class="row">
+            <main>
+             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
+              <h1>
+                Designing and prototyping the emergency driving test service
+              </h1>
+              <h2>
+                A case study talking through the design decisions that helped a team deliver an emergency service in just 34 days.
+              </h2>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
+            <h3>Introduction</h3>
+            <p>This case study focuses on my involvement in creating a temporary replacement service during the COVID-19 pandemic, enabling critical workers to apply for driving tests.</p>
+            <p>A more detailed version of this is work is <a target="_blank" href="https://designnotes.blog.gov.uk/2021/04/29/designing-at-pace-at-the-driver-and-vehicle-standards-agency-dvsa/">featured in the Design in Government GOV.UK blog (link opens in a new tab)</a>. </p>
+            <div class="picture">
+              <figure>
+                <img src="../../images/work_emergency/DVSA-emergency-driving-test-service.jpg" alt="GOV.UK page for emergency driving tests for critical workers." width="100%"/>
+                <figcaption>GOV.UK page for emergency driving tests for critical workers.</figcaption>
+              </figure>
+            </div>
+            <h3>The Situation</h3>
+            <p>In March 2020, the driving test service was suspended due to the pandemic. The DVSA decided to build a service to allow critical workers to apply for tests and reduce manual processing.</p>
+            <h3>The Task</h3>
+            <p>As the Service Designer, I collaborated with the team to ensure user needs were met and designed a prototype for the final solution.</p>
+            <h3>Discovery Phase</h3>
+            <p>Research was conducted to gather user needs, understand pain points, and identify evidence requirements for critical worker eligibility.</p>
+            <h3>User needs</h3>
+            <h4>Critical worker user need</h4>
+            <p>
+              As a key worker without a full driving licence I need to book a theory or practical driving test as soon as possible to enable me to travel to and from, or for work purposes.
+            </p>
+            <p>
+              Need is met when the user:
+            </p>
+            <ul>
+              <li>knows if they meet the eligibility criteria for an emergency test</li>
+              <li>can apply for emergency test</li>
+              <li>knows what happens when they've applied</li>
+              <li>can take their test if they meet the eligibility criteria</li>
+            </ul>
+            <h4>DVSA Deployment team user need</h4>
+            <p>
+              As a member of the DVSA Deployment team I need to be able to prioritise and process driving test requests from key workers as quickly as possible.
+            </p>
+            <p>
+              Need is met when the user:
+            </p>
+            <ul>
+              <li>has a complete application to process</li>
+              <li>can quickly match the candidate's request against an available driving examiner</li>
+              <li>is able to easily keep track of new applications and completed applications</li>
+            </ul>
+            <h3>Designing the Service</h3>
+            <p>We prioritised questions to identify critical workers first, followed by contact information and test-related questions. A user journey map was created.</p>
+            <h3>Keeping Stakeholders Informed</h3>
+            <p>We used Miro to document workshops, meetings, and prototype versions. A documentation structure was introduced, showcasing design changes.</p>
+            <div class="picture">
+              <figure>
+                <img src="../../images/work_emergency/swimlanes.jpg" alt="Documentation layout mapping design changes." width="100%"/>
+                <figcaption>Documentation layout mapping design changes.</figcaption>
+              </figure>
+            </div>
+            <h3>Prototyping the Service</h3>
+            <p>We used GOV.UK Design System and Prototype Kit to create high-fidelity prototypes. JavaScript was added for an interactive user journey.</p>
+            <div class="picture">
+              <figure>
+                <img src="../../images/work_emergency/prototype.gif" alt="Prototype with error messaging functionality." width="100%"/>
+                <figcaption>Prototype with error messaging functionality.</figcaption>
+              </figure>
+            </div>
+            <h3>Expanding Documentation Style</h3>
+            <p>Design and development lanes were introduced into our documentation, showcasing research, design ideas, and live versions.</p>
+            <div class="picture">
+              <figure>
+                <img src="../../images/work_emergency/swimlanes2.jpg" alt="Documentation with multiple development and design lanes." width="100%"/>
+                <figcaption>Documentation with multiple development and design lanes.</figcaption>
+              </figure>
+            </div>
+            <h3>Adapting After Go Live</h3>
+            <p>User feedback led to improvements, like an email replay component to avoid typos. Alert cards were used to indicate added features.</p>
+            <div class="picture">
+              <figure>
+                <img src="../../images/work_emergency/email.gif" alt="Email replay functionality to avoid typos." width="100%"/>
+                <figcaption>Email replay functionality to avoid typos.</figcaption>
+              </figure>
+            </div>
+            <h3>Conclusion</h3>
+            <p>The temporary service helped 30,000 critical workers book tests and received 110,000 applications. Lessons learned were integrated into DVSA's ways of working.</p>
+            <p>It was a proud achievement to provide a service for critical workers during a difficult time.</p>
+          </div>
+        </main>
+      </div>
+    </div>
+</section>
+
+
+		<!-- footer -->
+
+		<footer role="contentinfo" class="footer">
+
+			<div class="container">
+
+				<div class="row equal">
+
+					<div class="col-xs-12">
+						<p class="footer__left">Alex lee design</p>
+						<ul class="l--inline footer__links">
+							<li><a href="/">Home</a></li>
+							<li><a href="/work">Work</a></li>
+							<li><a href="/blog">Blog</a></li>
+						</ul>
+						<ul class="l--inline footer__links">
+							<li>
+								<a target="_blank" href="https://twitter.com/alexlee_design">
+									Twitter <span class="visually-hidden">(link opens in a new tab)</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/alexleedesign/">
+									LinkedIn <span class="visually-hidden">(link opens in a new tab)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					
+
+				</div>
+
+			</div>
+
+		</footer>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/scripts/jquery-2.2.1.min.js"></script>
+		<script src="/scripts/main.js"></script>
+		</body>
+		</html>
