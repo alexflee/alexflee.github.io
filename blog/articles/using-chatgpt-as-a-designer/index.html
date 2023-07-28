@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Using ChatGPT as an interaction designer</title>
+        <!-- Main Stylesheets -->
+		<link rel="stylesheet" href="/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+
+    <body role="document">
+
+
+		<section id="skip">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<a class="button" href="#main-content">Skip to main content</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<header class="header">
+			
+			<div class="container">
+
+				<div class="row">
+					<div class="col-xs-12">
+						<nav role="navigation" class="main-nav">
+							<div id="logo">
+								<p><a href="/">Alex lee design</a></p>
+							</div>
+							<div class="nav-container">
+								<ul class="l--inline main-nav__navigation">
+									<li><a href="/">Home</a></li>
+									<li><a href="/work">Work</a></li>
+									<li><a href="/blog">Blog</a></li>
+								</ul>
+							</div>
+							<div id="toggle">
+								<p id="toggle-change" aria-atomic="true" class="hidden-text" aria-live="polite"><b id="toggle-change-type"></b> theme activated</p>
+								<button id="toggle-theme-colour" type="button" role="button" class="">
+									<span class="hidden-text">Activate dark theme</span>
+									
+									<svg id="dark" width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.589 21.659c-3.873 1.038-8.517-.545-10.98-3.632a1 1 0 0 1 .751-1.623c3.984-.118 6.662-1.485 8.17-4.098 1.51-2.613 1.354-5.616-.535-9.125a1 1 0 0 1 1.03-1.463c3.904.59 7.597 3.82 8.635 7.694 1.43 5.334-1.737 10.818-7.071 12.247z" fill="#000000"/></svg>
+									<svg version="1.0" id="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+										width="25px" height="25px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+									<g>
+										<circle fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" cx="32.003" cy="32.005" r="16.001"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.001,31.997c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4
+											s1.789,4,4,4h4C10.212,35.997,12.001,34.208,12.001,31.997z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.204,46.139l-2.832,2.833c-1.563,1.562-1.563,4.094,0,5.656
+											c1.562,1.562,4.094,1.562,5.657,0l2.833-2.832c1.562-1.562,1.562-4.095,0-5.657C16.298,44.576,13.767,44.576,12.204,46.139z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,51.999c-2.211,0-4,1.789-4,4V60c0,2.211,1.789,4,4,4
+											s4-1.789,4-4l-0.004-4.001C36.003,53.788,34.21,51.999,32.003,51.999z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,46.143c-1.559-1.566-4.091-1.566-5.653-0.004
+											s-1.562,4.095,0,5.657l2.829,2.828c1.562,1.57,4.094,1.562,5.656,0s1.566-4.09,0-5.656L51.798,46.143z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M60.006,27.997l-4.009,0.008
+											c-2.203-0.008-3.992,1.781-3.992,3.992c-0.008,2.211,1.789,4,3.992,4h4.001c2.219,0.008,4-1.789,4-4
+											C64.002,29.79,62.217,27.997,60.006,27.997z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,17.859l2.828-2.829c1.574-1.566,1.562-4.094,0-5.657
+											c-1.559-1.567-4.09-1.567-5.652-0.004l-2.829,2.836c-1.562,1.555-1.562,4.086,0,5.649C47.699,19.426,50.239,19.418,51.798,17.859z"
+											/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,11.995c2.207,0.016,4-1.789,4-3.992v-4
+											c0-2.219-1.789-4-4-4c-2.211-0.008-4,1.781-4,3.993l0.008,4.008C28.003,10.206,29.792,11.995,32.003,11.995z"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.212,17.855c1.555,1.562,4.079,1.562,5.646-0.004
+											c1.574-1.551,1.566-4.09,0.008-5.649l-2.829-2.828c-1.57-1.571-4.094-1.559-5.657,0c-1.575,1.559-1.575,4.09-0.012,5.653
+											L12.212,17.855z"/>
+									</g>
+									</svg>
+								</button>
+							</div>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+
+		</header>
+
+		<section id="article" class="">
+  <div class="container">
+    <div class="row">
+      <main>
+        <div class="col-xs-12 col-sm-7">
+        <h1>
+          Using ChatGPT as an interaction designer
+        </h1>
+        <h2>
+          An honest reflection of how I've been using ChatGPT in my day to day to speed things up and learn new things
+        </h2>
+      </div>
+      <div class="col-xs-12 col-sm-7">
+      <h3>Introduction</h3>
+      <p>Now that the dust has settled with ChatGPT, and the relentless advice has calmed down on social media, I thought I would give an honest take on how I’ve been using ChatGPT as an interaction designer.</p>
+      <p>I'm writing this because I'm curious about how others may be using it. For me, two categories have naturally appeared when I’ve been using ChatGPT:</p>
+      <ul>
+        <li>using it to speed up what I’m doing</li>
+        <li>exploring how I could use it to improve my ways of working and learn new things</li>
+      </ul>
+      <p>In this blog post, I’m going to talk through what things I’ve been doing within these two categories, starting with how I’ve been using it to speed things up for myself.</p>
+      <h3>Speeding things up</h3>
+      <p>There are three things that stick out for me for how I've been using it to speed things up.</p>
+      <h4>Summarising or noticing things</h4>
+      <p>It's good at summarising things. I've been using it numerous times to consolidate information such as statistics or content when it is safe to do so. I often use it to summarise my own messages to colleagues to ensure I’m not wasting anyone's time. </p>
+      <p>It's also useful for finding consistencies or patterns in things that take time to digest.</p>
+      <p>I’ve used it to help me:</p>
+      <ul>
+        <li>summarise my own messages to others when I’m sharing a big piece of work</li>
+        <li>notice patterns in data or snippets of content that would otherwise take time to digest</li>
+        <li>convert word documents of content into HTML pages with the correct typography markup from the <a href="https://design-system.service.gov.uk/">GDS design system (link opens in new tab)</a>.</li>
+      </ul>
+      <h4>Using it as a soundboard for getting ideas or inspiration</h4>
+      <p>Now and again, I’ve found ChatGPT to be quite a good soundboard. It can be useful for generating a new way to phrase something or offer an alternative to a problem.</p>
+      <p class="inset">Disclaimer, I don’t think it’s in any way a replacement for writing content, but it can often offer a different take on something that sparks conversation or is at least amusing to consider.</p>
+      <p>More than once it’s offered me and others something that keeps the momentum going on how to phrase something in guidance or email content.</p>
+      <h4>Manual intervention</h4>
+      <p>I've used ChatGPT the most when needing some help with a laborious task. In the absence of something like the <a href="https://fakerjs.dev/">npm package faker (link opens in a new tab)</a> to generate dummy info, It’s a godsend for making code changes when shortcuts aren’t enough to capture code everywhere. So far, I’ve used it to:</p>
+      <ul>
+        <li>update Json files used in prototypes in several places when things like faker can’t help</li>
+        <li>generate paragraphs of text as a persona for a more realistic prototype</li>
+        <li>scan a HTML file and make several changes on my behalf</li>
+        <li>clean up my prototype files when necessary</li>
+        <li>explain code changes in prototypes or user journey maps when sharing work</li>
+      </ul>
+      <h3>Improving my ways of working and learning new things</h3>
+      <p>Probably where it has impressed me the most is just how powerful it is as a learning tool or being helpful when looking for answers from coding problems to holiday trip advice (it’s great for this by the way).</p>
+      <h4>Prompts aren't everything</h4>
+      <p>I’ve seen a lot of advice out there for getting the ‘perfect prompts’ but I’m in favour of starting from scratch if you’re looking to learn something. For me personally I learn best when I'm getting the hang of something slowly to progressively build up my knowledge and ChatGPT is amazing for this. It’s been a great help for building my knowledge on:</p>
+      <ul>
+        <li>learning more in nunjucks, a popular language for building with the GDS prototype kit</li>
+        <li>why my code isn’t working</li>
+        <li>explaining what my code problem is, if I can’t seem to figure it out</li>
+      </ul>
+      <p>Rumour has it Stackoverflow are building an AI tool but until then, I can safely say I’ve replaced that as the go to place for answers for the time being.</p>
+      <h4>Learning new things on the fringes of my knowledge</h4>
+      <p>Initially I was throwing in a tonne of questions into ChatGPT just to see what it could do. This began as a purely experimental thing like most I imagine, but I soon realised just how useful it could be. I went down a bit of a rabbit hole trying to think of ideas of how it could speed up my ways of working, and stumbled across some interesting stuff I would have never come across before.</p>
+      <h4>Creating a user journey map script from scratch</h4>
+      <p>One idea I explored was if ChatGPT could help me build a script to record the pages on my prototype and create a user journey map. After an initial question of:
+      <p class="inset">"can you help me record the pages in my prototype and download screenshots of the pages?"</p> 
+      <p>I was soon exposed to languages and packages I had never used before, and slowly but surely, we worked together to build a working version of my initial idea using python and selenium to initially:</p>
+      <ul>
+        <li>start at a given URL</li>
+        <li>navigate to several pages in order</li>
+        <li>highlight what link was selected on each page</li>
+      </ul>
+       <div class="picture">
+          <figure>
+            <img src="../../../images/article_chatgpt/highlighting_links.png" alt="A screenshot of a prototype question page that is generated after automatically selecting an option and highlighting what link or button was selected." width="100%">
+            <figcaption>A screenshot of a prototype question page that is generated after automatically selecting an option and highlighting what link or button was selected.</figcaption>
+          </figure>
+      </div>
+      <p>After some more time back and forth, I eventually got the script to:</p>
+      <ul>
+        <li>fill in dummy information on each page</li>
+        <li>both randomly select options or specific options depending on the page</li>
+        <li>download screenshots on each page and saved them to a folder</li>
+        <li>create relevant file names for each image</li>
+        <li>combine all images into a user journey map once the script ended</li>
+      </ul>
+      <div class="picture">
+          <figure>
+            <img src="../../../images/article_chatgpt/entering_information.png" alt="A screenshot of a check your answers page that is generated after getting the code to enter dummy information." width="100%">
+            <figcaption>A screenshot of a check your answers page that is generated after getting the code to enter dummy information.</figcaption>
+          </figure>
+      </div>
+      <p>It’s still a work in progress of trying to speed up the process of creating user journey maps, but it certainly helped me learn and create something I wouldn’t have been able to before. I’m considering turning this into its own blog when it’s in a good place.</p>
+      <div class="picture">
+        <figure>
+          <img src="../../../images/article_chatgpt/complete_user_journey.png" alt="a generated image containing all the screenshots to create a simple user journey map." width="100%">
+          <figcaption>a generated image containing all the screenshots to create a simple user journey map.</figcaption>
+        </figure>
+      </div>
+      <h3>Wrapping up</h3>
+      <h4>How often I use it</h4>
+      <p>I've noticed there’s been no consistency of when I use it, it could be days before I try using it, and then some days I might use it three or four times. It’s certainly not a constant part of my ways of working yet, but I’m sure it will be soon.</p>
+      <p>I’m keen to see how others have been using it so feel free to reach out if you found this interesting –yes, I did use ChatGPT to help me write this.</p>
+      </main>
+    </div>
+  </div>
+</section>
+
+
+		<!-- footer -->
+
+		<footer role="contentinfo" class="footer">
+
+			<div class="container">
+
+				<div class="row equal">
+
+					<div class="col-xs-12">
+						<p class="footer__left">Alex lee design</p>
+						<ul class="l--inline footer__links">
+							<li><a href="/">Home</a></li>
+							<li><a href="/work">Work</a></li>
+							<li><a href="/blog">Blog</a></li>
+						</ul>
+						<ul class="l--inline footer__links">
+							<li>
+								<a target="_blank" href="https://twitter.com/alexlee_design">
+									Twitter <span class="visually-hidden">(link opens in a new tab)</span>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/alexleedesign/">
+									LinkedIn <span class="visually-hidden">(link opens in a new tab)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					
+
+				</div>
+
+			</div>
+
+		</footer>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/scripts/jquery-2.2.1.min.js"></script>
+		<script src="/scripts/main.js"></script>
+		</body>
+		</html>
