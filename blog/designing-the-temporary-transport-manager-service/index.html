@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
 		<title>Designing the temporary transport manager service</title>
         <!-- Main Stylesheets -->
 		<link rel="stylesheet" href="/css/style.css" />
-        <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -91,199 +91,244 @@
     <div class="container">
       <div class="row">
             <main>
-             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
-              <h1>
-                Designing the temporary transport manager service
-              </h1>
-              <h2>
-                A case study on the design, build and launch of a new service for temporary transport managers.
-              </h2>
+            <div class="opening">
+              <div class="col-xs-12 col-sm-10 col-md-8 col-md-push-2">
+                <p class="date"><span>Apr 5, 2022</span></p>
+                <h1>
+                  Designing the temporary transport manager service
+                </h1>
+                <h2>
+                  A case study on the design, build and launch of a new service for temporary transport managers.
+                </h2>
+              </div>
+              <div class="col-xs-12 col-sm-10 col-md-10 col-md-push-1">
+                <img src="../../images/work_ar/acquiredrights.png" alt="An initial online workshop with stakeholders to capture ideas, concerns, risks, what information we should ask for in the new service, a potential user journey and how it could integrate into the VOL service." width="100%">
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-7">
-            <h3>Introduction</h3>
-            <p>
-              The UK-EU negotiations brought vehicles used by couriers and delivery services, including vans, under the scope of operator licensing. 
-            </p>
-            <p>
-              This necessitated the creation of a new service to assist light goods vehicle (LGV) operators in applying to become temporary transport managers.
-            </p>
-            <p class="inset">
-              Transport managers are responsible for directing, coordinating, planning and overseeing tasks and operations within an organisation involving transportation activities. They are required to ensure the legal requirements for road haulage are met.
-            </p>
-            <p>
-              This case study outlines the design process for this service, covering the user research, discovery phase, service design, integration of existing components, development, and the launch of the service.
-            </p>
-            <h3>The task</h3>
-            <p>
-              As the primary service designer in the Vehicle Operator Licensing (VOL), I was in initial conversations with senior stakeholders at the Department for Transport (DFT) to help design a new service for LGV operators. LGV operators with good repute could use this service to apply to become temporary transport managers.
-            </p>
-            <p>
-              I was responsible for envisaging how the service could work and be as simple as possible for users, as well as leading on the design strategy of the service and it’s relationship with the current VOL service. I was also responsible for facilitating workshops and design reviews with key stakeholders from the Office of the Traffic Commissioner (OTC), Department for Transport (DFT) and the Driver and Vehicle Standards Agency (DVSA).
-            </p>
-            <h3>Discovery phase: unraveling the needs</h3>
-            <p>
-              During the discovery phase, extensive research was conducted to understand the needs of the new user group and gather insights from existing VOL license users. This research involved understanding the experiences of current VOL license users who were managing both light and heavy goods vehicles. Wth their feedback, we were able to make informed design decisions for the new service.
-            </p>
-            <p>
-              Stakeholder engagement was also crucial to identify the information required from users and establish the end-to-end journey, including application processing, appeals, and integration with the Vehicle Operator license application.           
-            </p>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>Introduction</h3>
+              <p>
+                The UK-EU negotiations brought vehicles used by couriers and delivery services, including vans, under the scope of operator licensing. 
+              </p>
+              <p>
+                This necessitated the creation of a new service to assist light goods vehicle (LGV) operators in applying to become temporary transport managers.
+              </p>
+              <p class="inset">
+                Transport managers are responsible for directing, coordinating, planning and overseeing tasks and operations within an organisation involving transportation activities. They are required to ensure the legal requirements for road haulage are met.
+              </p>
+              <p>
+                This case study outlines the design process for this service, covering the user research, discovery phase, service design, integration of existing components, development, and the launch of the service.
+              </p>
+              <h3>The task</h3>
+              <p>
+                As the primary service designer in the Vehicle Operator Licensing (VOL), I was in initial conversations with senior stakeholders at the Department for Transport (DFT) to help design a new service for LGV operators. LGV operators with good repute could use this service to apply to become temporary transport managers.
+              </p>
+              <p>
+                I was responsible for envisaging how the service could work and be as simple as possible for users, as well as leading on the design strategy of the service and it’s relationship with the current VOL service. I was also responsible for facilitating workshops and design reviews with key stakeholders from the Office of the Traffic Commissioner (OTC), Department for Transport (DFT) and the Driver and Vehicle Standards Agency (DVSA).
+              </p>
+              <h3>Discovery phase: unraveling the needs</h3>
+              <p>
+                During the discovery phase, extensive research was conducted to understand the needs of the new user group and gather insights from existing VOL license users. This research involved understanding the experiences of current VOL license users who were managing both light and heavy goods vehicles. Wth their feedback, we were able to make informed design decisions for the new service.
+              </p>
+              <p>
+                Stakeholder engagement was also crucial to identify the information required from users and establish the end-to-end journey, including application processing, appeals, and integration with the Vehicle Operator license application.           
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/team_discussion.png" alt="An initial online workshop with stakeholders to capture ideas, concerns, risks, what information we should ask for in the new service, a potential user journey and how it could integrate into the VOL service." width="100%">
                   <figcaption>An initial online workshop with stakeholders to capture ideas, concerns, risks, what information we should ask for in the new service, a potential user journey and how it could integrate into the VOL service.</figcaption>
                 </figure>
               </div>
-            <p>
-              These sessions also enabled us to discuss:
-            </p>
-            <ol>
-              <li>Information stakeholders wanted from users</li>
-              <li>Needs of the users going through the application</li>
-              <li>How these applications would be reviewed and by who</li>
-              <li>What the options were for users with a refused application, such as hiring a transport manager or submitting an appeal against a refused application</li>
-              <li>How to proceed with an approved application</li>
-              <li>How an approved application could be used in the Vehicle Operator licence application process</li>
-              <li>The end to end user journey, and what each organisation would be responsible for in this journey.</li>
-            </ol>
-            <p>
-              Once we were clear on the end to end journey, I created a user journey map that highlighted all possible outcomes and how the information would be shared between organisations.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <p>
+                These sessions also enabled us to discuss:
+              </p>
+              <ol>
+                <li>Information stakeholders wanted from users</li>
+                <li>Needs of the users going through the application</li>
+                <li>How these applications would be reviewed and by who</li>
+                <li>What the options were for users with a refused application, such as hiring a transport manager or submitting an appeal against a refused application</li>
+                <li>How to proceed with an approved application</li>
+                <li>How an approved application could be used in the Vehicle Operator licence application process</li>
+                <li>The end to end user journey, and what each organisation would be responsible for in this journey.</li>
+              </ol>
+              <p>
+                Once we were clear on the end to end journey, I created a user journey map that highlighted all possible outcomes and how the information would be shared between organisations.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/acquiredrights.png" alt="A user journey map including the front and back end processing of the service, along with organisational handovers." width="100%">
                   <figcaption>A user journey map including the front and back end processing of the service, along with organisational handovers.</figcaption>
                 </figure>
               </div>
-            <h3>Designing the service</h3>
-            <p>
-              Design priorities were established, with a focus on verifying credentials, ensuring road safety, and addressing potential gaps in user experience. A service blueprint was created, outlining the steps and interactions involved in the service. 
-            </p>
-            <div class="picture">
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>Designing the service</h3>
+              <p>
+                Design priorities were established, with a focus on verifying credentials, ensuring road safety, and addressing potential gaps in user experience. A service blueprint was created, outlining the steps and interactions involved in the service. 
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
+              <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/blueprint.jpg" alt="My initial blueprint of the service, including the build up to using the service, the service itself and the application processing from the user and caseworkers point of view." width="100%">
                   <figcaption>My initial blueprint of the service, including the build up to using the service, the service itself and the application processing from the user and caseworkers point of view.</figcaption>
                 </figure>
               </div>
-            <p>
-              The blueprint included:
-            </p>
-            <ol>
-              <li>How users would find out about the service</li>
-              <li>Initial steps the user could take before applying</li>
-              <li>Creating an application</li>
-              <li>The application verdict process from a users point of view</li>
-              <li>How to review an application fom a caseworkers point of view</li>
-              <li>The appeals process</li>
-              <li>Using the application reference code in the VOL licence application</li>
-            </ol>
-            <p>
-              After multiple iterations, we had established our journey!
-            </p>
-            <h3>Creating an initial prototype</h3>
-            <p>
-              I took this blueprint away to create an initial design of the service using the GDS prototype kit. I worked closely with a content designer to create our journey, and established the key phases in our journey, these were:
-            </p>
-            <ol>
-              <li>Find out if the user is using the right vehicle</li>
-              <li>Find out if the user has the right experience</li>
-              <li>Show the unhappy paths if steps 1 and 2 are not met</li>
-              <li>If it is the correct vehicle and they have enough experience, ask for the users personal details</li>
-              <li>Ask for users contact details</li>
-              <li>Ask the user to record their work history for the last 10 years</li>
-              <li>Ask the user to sign a declaration</li>
-              <li>Show the user a confirmation page with a unique reference number and next steps</li>
-            </ol>
-            <p>
-              We created a design based on all the components and patterns in the GDS Design System to ensure we were creating a simple and easy to use service. It also gave us a good foundation for accessibility using well tested components.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <p>
+                The blueprint included:
+              </p>
+              <ol>
+                <li>How users would find out about the service</li>
+                <li>Initial steps the user could take before applying</li>
+                <li>Creating an application</li>
+                <li>The application verdict process from a users point of view</li>
+                <li>How to review an application fom a caseworkers point of view</li>
+                <li>The appeals process</li>
+                <li>Using the application reference code in the VOL licence application</li>
+              </ol>
+              <p>
+                After multiple iterations, we had established our journey!
+              </p>
+              <h3>Creating an initial prototype</h3>
+              <p>
+                I took this blueprint away to create an initial design of the service using the GDS prototype kit. I worked closely with a content designer to create our journey, and established the key phases in our journey, these were:
+              </p>
+              <ol>
+                <li>Find out if the user is using the right vehicle</li>
+                <li>Find out if the user has the right experience</li>
+                <li>Show the unhappy paths if steps 1 and 2 are not met</li>
+                <li>If it is the correct vehicle and they have enough experience, ask for the users personal details</li>
+                <li>Ask for users contact details</li>
+                <li>Ask the user to record their work history for the last 10 years</li>
+                <li>Ask the user to sign a declaration</li>
+                <li>Show the user a confirmation page with a unique reference number and next steps</li>
+              </ol>
+              <p>
+                We created a design based on all the components and patterns in the GDS Design System to ensure we were creating a simple and easy to use service. It also gave us a good foundation for accessibility using well tested components.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/start.png" alt="An early screenshot from one of the initial user journey maps" width="100%">
                   <figcaption>An early screenshot from one of the initial user journey maps</figcaption>
                 </figure>
               </div>
-            <h3>Integrating a work history pattern from DFE</h3>
-            <p>
-              As we had limited research on this user group, I started gathering research on similar services from across the public sector. This led to conversations with designers at the Department for Education to learn how they designed the teacher training service. This service used the ‘record history’ design component, which helped users record their teacher training.
-            </p>
-            <p>
-              We used the ‘record history’ component from DFE in our new service when asking users to enter their work history. This ensured we were using a well-researched component in our service as it was used across many services at DFE.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>Integrating a work history pattern from DFE</h3>
+              <p>
+                As we had limited research on this user group, I started gathering research on similar services from across the public sector. This led to conversations with designers at the Department for Education to learn how they designed the teacher training service. This service used the ‘record history’ design component, which helped users record their teacher training.
+              </p>
+              <p>
+                We used the ‘record history’ component from DFE in our new service when asking users to enter their work history. This ensured we were using a well-researched component in our service as it was used across many services at DFE.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/work.png" alt="Using the ‘record history’ component from DFE in our prototype to allow users to add their work history, and alert them with any gaps." width="100%">
                   <figcaption>Using the ‘record history’ component from DFE in our prototype to allow users to add their work history, and alert them with any gaps.</figcaption>
                 </figure>
               </div>
-            <h3>
-              Creating a design for the internal system
-            </h3>
-            <p>
-             An internal system was designed to process the applications, taking into account the existing systems and processes used by VOL caseworkers. The goal was to provide a familiar environment to streamline processing and facilitate the addition of unique reference codes for successful temporary transport manager applications.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                Creating a design for the internal system
+              </h3>
+              <p>
+              An internal system was designed to process the applications, taking into account the existing systems and processes used by VOL caseworkers. The goal was to provide a familiar environment to streamline processing and facilitate the addition of unique reference codes for successful temporary transport manager applications.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/internal2_2.png" alt="A later version of the internal portal user journey" width="100%">
                   <figcaption>A refined version of the internal portal user journey</figcaption>
                 </figure>
               </div>
-            <h3>
-              Authorising the application in the VOL service
-            </h3>
-            <p>
-             As part of the agile delivery team, I helped update VOL to accommodate the new light goods vehicle type and designed the process for successful temporary transport manager applications to add their unique reference code when applying for a license.
-            </p>
-            <p>
-              To streamline development, we adopted an MVP approach, adding functionality to the existing "adding a transport manager" journey. Users now have a choice when applying for a light goods vehicle license, between an approved application via the temporary transport manager service or the usual transport manager CPC qualification.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                Authorising the application in the VOL service
+              </h3>
+              <p>
+              As part of the agile delivery team, I helped update VOL to accommodate the new light goods vehicle type and designed the process for successful temporary transport manager applications to add their unique reference code when applying for a license.
+              </p>
+              <p>
+                To streamline development, we adopted an MVP approach, adding functionality to the existing "adding a transport manager" journey. Users now have a choice when applying for a light goods vehicle license, between an approved application via the temporary transport manager service or the usual transport manager CPC qualification.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/tm_info.gif" alt="A prototyped journey of how users could add their approved temporary transport manager application reference code in the VOL service." width="100%">
                   <figcaption>A prototyped journey of how users could add their approved temporary transport manager application reference code in the VOL service.</figcaption>
                 </figure>
               </div>
-            <h3>
-              User Research and Testing
-            </h3>
-            <p>
-             The prototype underwent several iterations based on feedback from potential users. Insights gained from user testing led to updates in content and guidance to improve clarity and provide additional support for users who faced challenges or did not meet the requirements.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                User Research and Testing
+              </h3>
+              <p>
+              The prototype underwent several iterations based on feedback from potential users. Insights gained from user testing led to updates in content and guidance to improve clarity and provide additional support for users who faced challenges or did not meet the requirements.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/research_alpha.png" alt="A compiled log of the user research on the service, internal system, and VOL service updates." width="100%">
                   <figcaption>A compiled log of the user research on the service, internal system, and VOL service updates.</figcaption>
                 </figure>
               </div>
-            <h3>
-              Unhappy paths
-            </h3>
-            <p>
-              Based on user feedback, I collaborated with the DVSA content design team to revamp the  <a target="_blank" href="https://www.gov.uk/become-transport-manager">guidance on GOV.UK for transport managers</a>. Our request to update the guidance with GDS led to a complete overhaul, allowing us to provide users with more helpful information by linking to it directly within the service.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                Unhappy paths
+              </h3>
+              <p>
+                Based on user feedback, I collaborated with the DVSA content design team to revamp the  <a target="_blank" href="https://www.gov.uk/become-transport-manager">guidance on GOV.UK for transport managers</a>. Our request to update the guidance with GDS led to a complete overhaul, allowing us to provide users with more helpful information by linking to it directly within the service.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/unhappy_path.gif" alt="An example of an ‘unhappy path’ on the service, where users would be given additional guidance on GOV.UK about transport managers." width="100%">
                   <figcaption>An example of an ‘unhappy path’ on the service, where users would be given additional guidance on GOV.UK about transport managers.</figcaption>
                 </figure>
               </div>
-            <h3>
-              Refining the prototype and mapping the full service
-            </h3>
-            <p>
-              The prototype and the complete service journey were refined through continuous research and testing. A full service blueprint was created to illustrate the end-to-end process, including user flows, caseworker journeys, and the appeals process.
-            </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                Refining the prototype and mapping the full service
+              </h3>
+              <p>
+                The prototype and the complete service journey were refined through continuous research and testing. A full service blueprint was created to illustrate the end-to-end process, including user flows, caseworker journeys, and the appeals process.
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 col-md-push-1">
               <div class="picture">
                 <figure>
                   <img src="../../images/work_ar/full_blueprint.jpg" alt="a picture of the full temporary transport manager service blueprint." width="100%">
                   <figcaption>A picture of the full temporary transport manager service blueprint</figcaption>
                 </figure>
               </div>
-            <h3>
-              Launching the service
-            </h3> 
-            <p>
-              Following a successful beta assessment, the service was launched. Ongoing monitoring and feedback will inform future improvements and enhancements to ensure the service continues to meet the needs of its users.
-            </p>
+            <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+              <h3>
+                Launching the service
+              </h3> 
+              <p>
+                Following a successful beta assessment, the service was launched. Ongoing monitoring and feedback will inform future improvements and enhancements to ensure the service continues to meet the needs of its users.
+              </p>
             </div>
             </main>
       </div>

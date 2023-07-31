@@ -8,6 +8,7 @@ $(document).ready(function(){
   const currentTheme = localStorage.getItem("theme");
   if (currentTheme == "dark") {
     document.body.classList.toggle("dark-theme");
+    $('#html').addClass("dark-theme");
   } else if (currentTheme == "light") {
     document.body.classList.toggle("light-theme");
   }
@@ -27,6 +28,12 @@ $(document).ready(function(){
     localStorage.setItem("theme", theme);
 
     $('#toggle-change-type').html(theme);
+
+    if ($("body").hasClass("dark-theme") == true) {
+      $('#html').addClass("dark-theme");
+    }else{
+      $('#html').removeClass("dark-theme");
+    }
 
   });
 
